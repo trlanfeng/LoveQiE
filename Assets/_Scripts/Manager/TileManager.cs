@@ -37,12 +37,15 @@ public class TileManager
         {
             return null;
         }
-        return tileSystem.GetTile(x, y);
+        return tileSystem.GetTile(y, x);
     }
 
-    private TileData getTileDataByDirection(TileDirection tDir)
+    public TileType getTargetTileData(Vector3 position,TileDirection tileDirection,int dir)
     {
-        switch (tDir)
+        TileIndex ti = tileSystem.ClosestTileIndexFromWorld(position);
+        int x = ti.column;
+        int y = ti.row;
+        switch (tileDirection)
         {
             case TileDirection.Up:
                 y -= 1;
@@ -59,40 +62,27 @@ public class TileManager
         }
         if (x < 0 || y < 0 || x > tileSystem.ColumnCount || y > tileSystem.RowCount)
         {
-            return null;
+            return TileType.OutSide;
         }
         else
         {
-            return getTileData(x, y);
-        }
-    }
-
-    public TileType getTileType(Vector3 position, TileDirection tileDirection)
-    {
-        TileIndex ti = getTileIndexByPosition(position);
-        x = ti.column;
-        y = ti.row;
-        TileData td = getTileDataByDirection(tileDirection);
-        if (td != null)
-        {
-            if (td.Empty)
+            TileData td = getTileData(x, y);
+            if (td != null)
+            {
+                if (td.Empty)
+                {
+                    return TileType.Blank;
+                }
+                if (td.SolidFlag)
+                {
+                    return TileType.Solid;
+                }
+                return TileType.Solid;
+            }
+            else
             {
                 return TileType.Blank;
             }
-            if (td.SolidFlag)
-            {
-                return TileType.Solid;
-            }
-            return TileType.Solid;
         }
-        else
-        {
-            return TileType.Blank;
-        }
-    }
-
-    public TileIndex getTileIndexByPosition(Vector3 position)
-    {
-        return tileSystem.ClosestTileIndexFromWorld(position);
     }
 }

@@ -7,12 +7,17 @@ public class CharactorManager : MonoBehaviour
 {
     GameManager GM;
     public int moveDirection;
+    int moveStep = 0;
     void Start()
     {
         GM = GameObject.Find("Main Camera").GetComponent<GameManager>();
     }
     void Update()
     {
+        if (GM.gameState != GameState.Play)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.W) && moveStep == 0)
         {
             checkByDirection(TileDirection.Up);
@@ -23,34 +28,48 @@ public class CharactorManager : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A) && moveStep == 0)
         {
-            checkByDirection(TileDirection.Left);
+            if (moveDirection == 1)
+            {
+                checkByDirection(TileDirection.Left);
+            }
+            else
+            {
+                checkByDirection(TileDirection.Right);
+            }
         }
         if (Input.GetKey(KeyCode.D) && moveStep == 0)
         {
-            checkByDirection(TileDirection.Right);
+            if (moveDirection == 1)
+            {
+                checkByDirection(TileDirection.Right);
+            }
+            else
+            {
+                checkByDirection(TileDirection.Left);
+            }
         }
     }
     void checkByDirection(TileDirection TD)
     {
-        moveStep = 1;
         TileManager TM = new TileManager(GM.tileSystem);
-        TileIndex ti = TM.getTileIndexByPosition(transform.position);
-        //获得tile类型
-        TileType tileType = TM.getTileType(transform.position, TD);
+        //传入position和位置，得到需要走的那一格的类型
+        TileType tileType = TM.getTargetTileData(transform.position, TD,moveDirection);
         //根据tile类型进行相应操作
         switch (tileType)
         {
             case TileType.Solid:
-                break;
+                return;
             case TileType.Item:
                 break;
             case TileType.Blank:
+                moveStep = 1;
                 moveByDirection(TD);
                 break;
             case TileType.OutSide:
                 break;
         }
     }
+
     void moveByDirection(TileDirection TD)
     {
         switch (TD)
@@ -62,28 +81,14 @@ public class CharactorManager : MonoBehaviour
                 moveDown();
                 break;
             case TileDirection.Left:
-                if (moveDirection == 1)
-                {
-                    moveLeft();
-                }
-                else
-                {
-                    moveRight();
-                }
+                moveLeft();
                 break;
             case TileDirection.Right:
-                if (moveDirection == 1)
-                {
-                    moveRight();
-                }
-                else
-                {
-                    moveLeft();
-                }
+                moveRight();
                 break;
         }
     }
-    int moveStep = 0;
+
     void moveUp()
     {
         transform.DOMoveY(transform.position.y + moveStep, 0.2f).OnComplete(clearMoveStep);
@@ -103,5 +108,13 @@ public class CharactorManager : MonoBehaviour
     void clearMoveStep()
     {
         moveStep = 0;
+        if (moveDirection == 1)
+        {
+            GM.charactorRight = transform.position;
+        }
+        else if (moveDirection == -1)
+        {
+            GM.charactorLeft = transform.position;
+        }
     }
 }

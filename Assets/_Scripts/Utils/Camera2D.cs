@@ -8,7 +8,7 @@ public class Camera2D : MonoBehaviour
     public int gameHeight = 1080;
     public int PixelPerUnit = 100;
 
-    private Camera camera;
+    private Camera camera2d;
 
     public enum scaleMode
     {
@@ -31,8 +31,8 @@ public class Camera2D : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        camera = transform.GetComponent<Camera>();
-        camera.backgroundColor = backgroundColor;
+        camera2d = transform.GetComponent<Camera>();
+        camera2d.backgroundColor = backgroundColor;
         screenWidth = Screen.width;
         screenHeight = Screen.height;
         deviceAspectRatio = (float)screenWidth / screenHeight;
@@ -41,10 +41,10 @@ public class Camera2D : MonoBehaviour
         {
             //按宽度适配
             case scaleMode.FitWidth:
-                camera.orthographicSize = (float)gameWidth / screenWidth * screenHeight / 2f / PixelPerUnit;
+                camera2d.orthographicSize = (float)gameWidth / screenWidth * screenHeight / 2f / PixelPerUnit;
                 break;
             case scaleMode.FitHeight:
-                camera.orthographicSize = gameHeight / 2f / PixelPerUnit;
+                camera2d.orthographicSize = gameHeight / 2f / PixelPerUnit;
                 break;
             case scaleMode.CropEdge:
                 break;
@@ -62,15 +62,15 @@ public class Camera2D : MonoBehaviour
         {
             return;
         }
-        camera.backgroundColor = backgroundColor;
+        camera2d.backgroundColor = backgroundColor;
         switch (ScaleMode)
         {
             //按宽度适配
             case scaleMode.FitWidth:
-                camera.orthographicSize = (float)gameWidth / screenWidth * screenHeight / 2f / PixelPerUnit;
+                camera2d.orthographicSize = (float)gameWidth / screenWidth * screenHeight / 2f / PixelPerUnit;
                 break;
             case scaleMode.FitHeight:
-                camera.orthographicSize = gameHeight / 2f / PixelPerUnit;
+                camera2d.orthographicSize = gameHeight / 2f / PixelPerUnit;
                 break;
             case scaleMode.CropEdge:
                 break;
