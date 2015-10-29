@@ -108,13 +108,5 @@ public class CharactorManager : MonoBehaviour
     void clearMoveStep()
     {
         moveStep = 0;
-        if (moveDirection == 1)
-        {
-            GM.charactorRight = transform.position;
-        }
-        else if (moveDirection == -1)
-        {
-            GM.charactorLeft = transform.position;
-        }
     }
 }
