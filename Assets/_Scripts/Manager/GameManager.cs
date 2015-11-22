@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public GameState gameState;
     void Start()
     {
-        maxScene = 5;
+        maxScene = 99;
         curScene = 1;
         gameState = GameState.Init;
     }
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
     {
         tileSystem = null;
         GameObject temp = curSceneGameObject;
-        curSceneGameObject = Instantiate(Resources.Load<GameObject>("Maps/Scenes/Scene" + curScene.ToString()));
+        curSceneGameObject = Instantiate(Resources.Load<GameObject>("Maps/Scenes/Scene " + curScene.ToString()));
         if (temp != null)
         {
             Destroy(temp);
