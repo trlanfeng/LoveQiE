@@ -6,11 +6,13 @@ using DG.Tweening;
 public class CharactorManager : MonoBehaviour
 {
     GameManager GM;
+    TileManager TM;
     public int moveDirection;
     int moveStep = 0;
     void Start()
     {
         GM = GameObject.Find("Main Camera").GetComponent<GameManager>();
+        TM = GM.GetComponent<TileManager>();
     }
     void Update()
     {
@@ -51,9 +53,8 @@ public class CharactorManager : MonoBehaviour
     }
     void checkByDirection(TileDirection TD)
     {
-        TileManager TM = new TileManager(GM.tileSystem);
         //传入position和位置，得到需要走的那一格的类型
-        TileType tileType = TM.getTargetTileData(transform.position, TD,moveDirection);
+        TileType tileType = TM.getTargetTileData(transform.position, TD, moveDirection);
         //根据tile类型进行相应操作
         switch (tileType)
         {

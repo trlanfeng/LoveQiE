@@ -17,32 +17,24 @@ public enum TileDirection
     Right
 }
 
-public class TileManager
+public class TileManager : MonoBehaviour
 {
-
-    private TileSystem tileSystem;
-    private TileIndex baseTileIndex;
-    private int x;
-    private int y;
-
-    public TileManager(TileSystem tileSystem)
-    {
-        this.tileSystem = tileSystem;
-
-    }
+    //private TileIndex baseTileIndex;
+    //private int x;
+    //private int y;
 
     public TileData getTileData(int x, int y)
     {
-        if (tileSystem == null)
+        if (GameManager.tileSystem == null)
         {
             return null;
         }
-        return tileSystem.GetTile(y, x);
+        return GameManager.tileSystem.GetTile(y, x);
     }
 
-    public TileType getTargetTileData(Vector3 position,TileDirection tileDirection,int dir)
+    public TileType getTargetTileData(Vector3 position, TileDirection tileDirection, int dir)
     {
-        TileIndex ti = tileSystem.ClosestTileIndexFromWorld(position);
+        TileIndex ti = GameManager.tileSystem.ClosestTileIndexFromWorld(position);
         int x = ti.column;
         int y = ti.row;
         switch (tileDirection)
@@ -60,7 +52,7 @@ public class TileManager
                 x += 1;
                 break;
         }
-        if (x < 0 || y < 0 || x > tileSystem.ColumnCount || y > tileSystem.RowCount)
+        if (x < 0 || y < 0 || x > GameManager.tileSystem.ColumnCount || y > GameManager.tileSystem.RowCount)
         {
             return TileType.OutSide;
         }

@@ -15,7 +15,9 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
-    public TileSystem tileSystem;
+    public static TileManager TM;
+    public static TileSystem tileSystem;
+
     public GameObject charactorLeft;
     public GameObject charactorRight;
     private int curScene;
