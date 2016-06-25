@@ -5,15 +5,11 @@ using DG.Tweening;
 
 public class CharactorManager : MonoBehaviour
 {
-    GameManager GM;
-    TileManager TM;
+    public GameManager GM;
+    public TileManager TM;
     public int moveDirection;
     int moveStep = 0;
-    void Start()
-    {
-        GM = GameObject.Find("Main Camera").GetComponent<GameManager>();
-        TM = GM.GetComponent<TileManager>();
-    }
+
     void Update()
     {
         if (GM.gameState != GameState.Play)
