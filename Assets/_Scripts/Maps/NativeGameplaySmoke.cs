@@ -111,11 +111,22 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
         var level = GameManager.CurrentLevel;
         var city = level.GetComponent<CityLevelVisuals>();
         Check(city != null && city.Roads != null && city.Sidewalks != null, "City theme loaded");
+        var theme = Resources.Load<CityTileTheme>("City/CityTheme");
         for (int y = 0; y < level.rows; y++)
             for (int x = 0; x < level.columns; x++)
             {
                 var cell = NativeLevel.ToCell(x, y);
                 bool blocked = level.IsBlocked(x, y);
+                if (blocked)
+                {
+                    int[] dx = { 0, 1, 0, -1, 1, 1, -1, -1 };
+                    int[] dy = { -1, 0, 1, 0, -1, 1, 1, -1 };
+                    int expected = 0;
+                    for (int i = 0; i < 8; i++)
+                        if (!level.IsBlocked(x + dx[i], y + dy[i])) expected |= 1 << i;
+                    Check(city.Sidewalks.GetTile(cell) == theme.sidewalks[expected],
+                        "Eight-neighbor sidewalk selection " + cell);
+                }
                 Check(city.Roads.HasTile(cell) == !blocked && city.Sidewalks.HasTile(cell) == blocked,
                     "City artwork agrees with collision cell " + cell);
                 Check(blocked || (!city.Buildings.HasTile(cell) && !city.Decorations.HasTile(cell)),

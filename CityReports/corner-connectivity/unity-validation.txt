@@ -1,0 +1,1 @@
+PASS: 300 sprites; 292 Tile assets; 2 native Tile Palettes; 99 levels / 20196 cells; correct road/obstacle separation, curb masks, grid alignment, no props on roads, repeatable rebuild; both four-frame car prefabs.

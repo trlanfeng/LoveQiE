@@ -7,7 +7,7 @@ Requires Pillow. AI sources/prompts are retained in output/imagegen; no credenti
 import json
 import math
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageOps, ImageFilter, ImageChops
+from PIL import Image, ImageDraw, ImageOps
 from prepare_car_sprites import extract as chroma_extract, make_frames
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,64 +47,8 @@ def pack(name, entries, columns):
 
 
 def raised_sidewalk(mask, asphalt):
-    """A continuous raised slab. Only road-facing edges are inset/rounded.
-
-    Unexposed sides extend past the tile, so long blocks have no false end caps.
-    Render at 4x for smooth curves; keep road-colored pixels under the round cuts.
-    """
-    scale = 4
-    size = SIZE * scale
-
-    def silhouette(inset=0, dx=0, dy=0):
-        bounds = [5 + inset if mask & 8 else -64,
-                  4 + inset if mask & 1 else -64,
-                  123 - inset if mask & 2 else 192,
-                  120 - inset if mask & 4 else 192]
-        bounds = [(v + (dx if i % 2 == 0 else dy)) * scale for i, v in enumerate(bounds)]
-        shape = Image.new("L", (size, size))
-        ImageDraw.Draw(shape).rounded_rectangle(bounds, radius=max(1, 22 - inset) * scale, fill=255)
-        return shape
-
-    tile = asphalt.resize((size, size), Image.Resampling.BICUBIC)
-    top = silhouette()
-    shadow = silhouette(dx=1, dy=4).filter(ImageFilter.GaussianBlur(2 * scale))
-    tile.paste((22, 30, 34, 255), (0, 0, size, size), shadow.point(lambda a: int(a * 0.48)))
-    # Five-pixel south-facing fascia under the cap gives the sidewalk its height.
-    tile.paste((108, 103, 94, 255), (0, 0, size, size), silhouette(dy=5))
-    tile.paste((155, 148, 133, 255), (0, 0, size, size), silhouette(dy=3))
-    tile.paste((202, 196, 177, 255), (0, 0, size, size), top)
-    light = ImageChops.subtract(top, silhouette(dx=1.2, dy=1.5))
-    tile.paste((247, 237, 215, 255), (0, 0, size, size), light)
-    shade = ImageChops.subtract(top, silhouette(dx=-1, dy=-1))
-    tile.paste((159, 153, 138, 255), (0, 0, size, size), shade)
-
-    # Large warm paving slabs with restrained seams and subtle stone variation.
-    paving = Image.new("RGBA", (size, size), "#c1b9a6")
-    draw = ImageDraw.Draw(paving)
-    for y in range(0, 128, 32):
-        for x in range(-32 if y % 64 else 0, 128, 32):
-            tone = ((x // 32 * 3 + y // 32 * 5) % 5) - 2
-            draw.rectangle((x * scale, y * scale, (x + 32) * scale, (y + 32) * scale),
-                           fill=(193 + tone, 185 + tone, 167 + tone, 255))
-            draw.line((x * scale, y * scale, (x + 32) * scale, y * scale), fill="#a89f8d", width=scale)
-            draw.line((x * scale, y * scale, x * scale, (y + 32) * scale), fill="#ada490", width=scale)
-            draw.line((x * scale + scale, y * scale + scale, (x + 32) * scale - scale, y * scale + scale), fill="#d0c8b5", width=scale)
-    # Thin inner groove, then the paving inset. Both follow the same round corner.
-    tile.paste((158, 150, 132, 255), (0, 0, size, size), silhouette(inset=7))
-    tile.paste(paving, (0, 0), silhouette(inset=8))
-    # Joints between curb stones are confined to the cap; no square lines cut corners.
-    cap = ImageChops.subtract(top, silhouette(inset=7))
-    joints = Image.new("L", (size, size))
-    d = ImageDraw.Draw(joints)
-    for p in (32, 64, 96):
-        if mask & 1: d.line((p * scale, 0, p * scale, 12 * scale), fill=110, width=scale)
-        if mask & 4: d.line((p * scale, 112 * scale, p * scale, size), fill=110, width=scale)
-        if mask & 8: d.line((0, p * scale, 13 * scale, p * scale), fill=110, width=scale)
-        if mask & 2: d.line((115 * scale, p * scale, size, p * scale), fill=110, width=scale)
-    tile.paste((121, 116, 104, 255), (0, 0, size, size), ImageChops.multiply(joints, cap))
-    result = tile.resize((128, 128), Image.Resampling.LANCZOS)
-    assert result.getextrema()[3] == (255, 255)
-    return result
+    from city_sidewalk_geometry import sidewalk
+    return sidewalk(mask, asphalt)
 
 
 def terrain():
@@ -128,7 +72,7 @@ def terrain():
         tile.alpha_composite(wear)
         assert tile.getextrema()[3] == (255, 255)
         entries.append((f"asphalt_{i:02}", tile))
-    for mask in range(16):
+    for mask in range(256):
         entries.append((f"sidewalk_{mask:02}", raised_sidewalk(mask, asphalt)))
     for mask in range(16):
         tile = Image.new("RGBA", (128, 128))
@@ -196,7 +140,7 @@ def main():
     buildings, props = props_and_buildings()
     vehicles = cars()
     manifest = dict(tileSize=SIZE, padding=PAD, pixelsPerUnit=128, atlases=[
-        pack("city_terrain", ground, 8), pack("city_buildings", buildings, 4),
+        pack("city_terrain", ground, 16), pack("city_buildings", buildings, 4),
         pack("city_props", props, 4), pack("city_cars", vehicles, 4)])
     (OUT.parent / "city-atlas.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     # A labeled contact sheet for choosing tiles, separate from the runtime atlases.
@@ -227,8 +171,8 @@ def main():
         animated.append(frame)
     animated[0].save(REPORT / "city-style-preview.png")
     animated[0].save(REPORT / "city-cars-driving.gif", save_all=True, append_images=animated[1:], duration=50, loop=0)
-    (REPORT / "image-validation.txt").write_text("PASS: 60 sprites (40 terrain, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.\n", encoding="utf-8")
-    print("PASS: 4 atlases, 60 sprites; exact asphalt seams, transparent cutouts, car loops and manifest.")
+    (REPORT / "image-validation.txt").write_text("PASS: 300 sprites (280 terrain, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.\n", encoding="utf-8")
+    print("PASS: 4 atlases, 300 sprites; exact asphalt seams, transparent cutouts, car loops and manifest.")
 
 
 if __name__ == "__main__":

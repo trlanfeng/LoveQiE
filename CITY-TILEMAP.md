@@ -6,12 +6,12 @@
 
 | 文件 | 内容 |
 | --- | --- |
-| `Assets/CityTiles/Textures/city_terrain.png` | 40 个切片：4 种柏油路面、16 种人行道路沿组合、16 种道路连接标线、2 种斑马线、2 种停车位 |
+| `Assets/CityTiles/Textures/city_terrain.png` | 280 个切片：4 种柏油路面、256 种八邻格人行道路沿组合、16 种道路连接标线、2 种斑马线、2 种停车位 |
 | `Assets/CityTiles/Textures/city_buildings.png` | 8 栋建筑：砖红/蓝灰/鼠尾草绿屋顶住宅、平顶公寓、咖啡店、面包店、诊所、商店 |
 | `Assets/CityTiles/Textures/city_props.png` | 树、路灯、长椅、花坛，4 个透明装饰 |
 | `Assets/CityTiles/Textures/city_cars.png` | 红、绿小汽车各 4 帧，行驶序列帧 |
 | `Assets/CityTiles/city-atlas.json` | 切片名称及像素坐标清单，坐标原点在左下方 |
-| `Assets/CityTiles/Tiles/` | 52 个原生 Unity Tile 资源，已经绑定 Sprite |
+| `Assets/CityTiles/Tiles/` | 292 个原生 Unity Tile 资源，已经绑定 Sprite |
 | `Assets/CityTiles/CityPalette.prefab` | 全部地面、建筑和装饰的 Tile Palette |
 | `Assets/CityTiles/CityBuildingsPalette.prefab` | 单独的建筑和装饰 Tile Palette |
 | `Assets/CityTiles/CityTilemapDemo.prefab` | 已经拼好的第一关城市样例，可在 Prefab Mode 中查看各层 |
@@ -26,9 +26,9 @@
 - 每个切片四周有 **2 像素边缘延展**，图集单元间距为 **132**。已保存 Sprite Editor 切片，不需要手动切图。
 - 手工重新切片时使用偏移 `(2,2)`、切片大小 `(128,128)`、间距 `(4,4)`；不要按无间隔 128 网格切图。
 - 路面为不透明背景；标线、建筑、装饰和汽车保留透明通道。
-- 道路标线与人行道的后缀为连接掩码：北=1、东=2、南=4、西=8，相加后补成两位数。例如 `lane_05` 是南北，`lane_10` 是东西，`lane_03` 是北东转角，`lane_15` 是十字；`sidewalk_03` 在北、东两边有路沿。
+- 道路标线后缀仍为四邻格连接掩码：北=1、东=2、南=4、西=8。例如 `lane_05` 是南北、`lane_10` 是东西。人行道使用完整八邻格道路掩码：北=1、东=2、南=4、西=8、东北=16、东南=32、西南=64、西北=128。相邻格可通行时加上对应位；文件名为 `sidewalk_00` 到 `sidewalk_255`。游戏和 Rebuild selected level preview 会自动选片，手工只看上下左右选片仍会接错。
 - 路面 4 种变化的四周像素已做精确接缝检查；道路标线是独立透明层，可按需要擦除或换成斑马线。
-- 人行道采用参考图中的抬高路台效果：约 22 像素外圆角、7 像素石材压顶、5 像素南侧立面，搭配左上方高光和贴地阴影。圆角切去的区域带柏油底色；连续街区内部边不会加端盖。原有 16 种边掩码、切片坐标及 Tile 引用保持一致。这组四邻接切片支持街区外圆角，未扩展为包含对角判定的内凹圆角系统。
+- 人行道按完整邻域的连续街区轮廓计算圆角、路沿和阴影后切片，包含内凹角、外凸角、T 形、十字、环形、细桥及斜向接触。保留全部 256 状态，避免对角图形在阴影上有细微差别时被错误合并。旧 16 张名称保留，但定义现已包含对角信息；独立手工地图需要重选瓦片或重建城市层。
 
 ## 用 Tile Palette 编辑
 
@@ -55,7 +55,7 @@
 
 道路材质采样自批准的城市预览；路面接缝、路沿、标线、打包边距通过脚本按精确像素规则处理。图集不是直接把整张概念图等分裁切，因此不会带入被建筑遮挡的道路或概念图里变化过的关卡结构。凭据未保存到项目。
 
-1. 安装 Pillow，运行 `python Tools/build_city_tiles.py` 重新打包 4 张图集并生成总览。
+1. 安装 `Tools/requirements.txt` 中的 Pillow、NumPy、SciPy，运行 `python Tools/build_city_tiles.py` 重新打包 4 张图集并生成总览。
 2. 在团结编辑器执行 **Tools > City Tilemap > Import atlases and configure city**，创建/更新切片、Tile、主题、调色板、样例和汽车引用；同名切片保留 Sprite ID。
 3. 此设置命令会重建主题配置、调色板和样例并重置汽车为 4 帧/20 FPS。手工定制这些生成资产后不要随意重跑。
 4. 只验证可执行 **Tools > City Tilemap > Validate city assets and all levels**。
@@ -64,4 +64,12 @@
 
 `CityReports` 保存图像接缝检查、Unity 图集与全部关卡结构检查、构建结果和运行回归材料。旧 `MigrationReports`、`CarReports` 保留旧版本报告，城市版本应以 `CityReports` 为准。
 
-本次验证环境为团结引擎 1.6.13 / 2022.3.61t14。已完成 60 个切片和两个 Tile Palette 的资产检查、99 关 / 20,196 个格子的编辑器结构检查，以及 Windows 实际游戏中的 48,030 项检查、99/99 关自动通关，0 个运行错误。`CityReports/runtime-scene-1.png` 为游戏实际摄像机渲染。Tile Palette 资产已生成并验证，未进行人工 GUI 笔刷操作验收。
+首版验证材料保留在 `CityReports` 根目录；八邻格修复的最新报告和实际游戏截图在 `CityReports/corner-connectivity`。验证环境为团结引擎 1.6.13 / 2022.3.61t14。Tile Palette 资产已生成并验证，未进行人工 GUI 笔刷操作验收。
+
+## 八邻格连接修复
+
+地形图集扩大为 **2112×2376**，16 列 × 18 行，280 个切片；Unity 最大纹理尺寸设为 4096，防止自动缩小。切片仍为 128×128、2px 边距、132px 步长；同名 Sprite 保留 ID，导入坐标随图集高度更新。所有图集合计 300 个 Sprite、292 个 Tile。
+
+执行 `python Tools/preview_city_terrain.py` 会比较所有 **2,048 组合法相邻人行道连接**与整块轮廓渲染，并验证 L/T/十字/环形/斜向接触/单格细桥组合。最大颜色通道差为 4/255，来自分别缩放切片边界时的抗锯齿采样。不是只检查两条直边是否颜色相同。结果和图示在 `CityReports/corner-connectivity`。旧 `terrain-comparison` 报告仅代表之前矩形示例的有限检查，不能证明复杂转角正确。
+
+Unity 穷举全部 256 个邻域检查选片映射，并检查 99 关 / 20,196 个格子。Windows 实际游戏完成 **58,884 项检查、99/99 关自动通关、0 个运行错误**，新增检查逐格核对每关实际使用的人行道切片。运行图见 `CityReports/corner-connectivity/runtime-scene-1.png`。

@@ -40,7 +40,7 @@ public sealed class CityLevelVisuals : MonoBehaviour
                 int variant = (x * 7 + y * 11) & 3;
                 if (level.IsBlocked(x, y))
                 {
-                    sidewalks.SetTile(cell, theme.sidewalks[mask]);
+                    sidewalks.SetTile(cell, theme.sidewalks[SidewalkMask(level, x, y)]);
                     bool median = x == level.columns / 2 && y > 1 && y < level.rows - 1;
                     bool plantedCorner = (x == 0 || x == level.columns - 1) && y % 3 == 0;
                     if (median || plantedCorner)
@@ -63,6 +63,15 @@ public sealed class CityLevelVisuals : MonoBehaviour
         var renderer = level.obstacles.GetComponent<TilemapRenderer>();
         if (renderer != null) renderer.enabled = false;
         foreach (var map in new[] { roads, sidewalks, markings, buildings, decorations }) map.CompressBounds();
+    }
+
+    public static int SidewalkMask(NativeLevel level, int x, int y)
+    {
+        return RoadMask(level, x, y)
+            | (!level.IsBlocked(x + 1, y - 1) ? 16 : 0)
+            | (!level.IsBlocked(x + 1, y + 1) ? 32 : 0)
+            | (!level.IsBlocked(x - 1, y + 1) ? 64 : 0)
+            | (!level.IsBlocked(x - 1, y - 1) ? 128 : 0);
     }
 
     public static int RoadMask(NativeLevel level, int x, int y)

@@ -1,0 +1,1 @@
+PASS: 256 eight-neighbor variants; 2048 compatible tile pairs compared against a continuous global contour; maximum channel difference=4/255; L/T/cross/ring/diagonal/one-cell-neck assemblies checked; 280 terrain slices.

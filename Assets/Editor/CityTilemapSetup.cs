@@ -54,7 +54,7 @@ public static class CityTilemapSetup
         var theme = AssetDatabase.LoadAssetAtPath<CityTileTheme>(themePath);
         if (theme == null) { theme = ScriptableObject.CreateInstance<CityTileTheme>(); AssetDatabase.CreateAsset(theme, themePath); }
         theme.asphalt = Enumerable.Range(0, 4).Select(i => (TileBase)tiles["asphalt_" + i.ToString("00")]).ToArray();
-        theme.sidewalks = Enumerable.Range(0, 16).Select(i => (TileBase)tiles["sidewalk_" + i.ToString("00")]).ToArray();
+        theme.sidewalks = Enumerable.Range(0, 256).Select(i => (TileBase)tiles["sidewalk_" + i.ToString("00")]).ToArray();
         theme.lanes = Enumerable.Range(0, 16).Select(i => (TileBase)tiles["lane_" + i.ToString("00")]).ToArray();
         theme.buildings = new[] { "house_terracotta", "house_slate", "house_sage", "apartment_cream", "cafe", "bakery", "clinic", "shop" }.Select(n => (TileBase)tiles[n]).ToArray();
         theme.props = new[] { "tree", "streetlamp", "bench", "planter" }.Select(n => (TileBase)tiles[n]).ToArray();
@@ -84,7 +84,7 @@ public static class CityTilemapSetup
         importer.wrapMode = TextureWrapMode.Clamp;
         importer.npotScale = TextureImporterNPOTScale.None;
         importer.textureCompression = TextureImporterCompression.Uncompressed;
-        importer.maxTextureSize = 2048;
+        importer.maxTextureSize = atlas.file == "city_terrain.png" ? 4096 : 2048;
         var settings = new TextureImporterSettings();
         importer.ReadTextureSettings(settings);
         settings.spriteMeshType = SpriteMeshType.FullRect;
@@ -175,6 +175,7 @@ public static class CityTilemapSetup
     [MenuItem("Tools/City Tilemap/Validate city assets and all levels")]
     public static void Validate()
     {
+        ValidateNeighborSelection();
         Directory.CreateDirectory("CityReports");
         int sprites = 0;
         foreach (Atlas atlas in ReadManifest().atlases)
@@ -187,7 +188,7 @@ public static class CityTilemapSetup
                 sprites++;
             }
         }
-        Require(sprites == 60, "Expected 60 city sprites");
+        Require(sprites == 300, "Expected 300 city sprites");
         var theme = Resources.Load<CityTileTheme>("City/CityTheme");
         Require(theme != null && theme.IsConfigured, "Complete city theme");
         int checkedCells = 0;
@@ -207,7 +208,7 @@ public static class CityTilemapSetup
                         var cell = NativeLevel.ToCell(x, y);
                         bool blocked = level.IsBlocked(x, y);
                         Require(city.Roads.HasTile(cell) == !blocked && city.Sidewalks.HasTile(cell) == blocked, "Visual occupancy " + number + cell);
-                        Require(!blocked || city.Sidewalks.GetTile(cell) == theme.sidewalks[CityLevelVisuals.RoadMask(level, x, y)], "Curb edge mask " + number + cell);
+                        Require(!blocked || city.Sidewalks.GetTile(cell) == theme.sidewalks[CityLevelVisuals.SidewalkMask(level, x, y)], "Curb edge mask " + number + cell);
                         Require(blocked || (!city.Buildings.HasTile(cell) && !city.Decorations.HasTile(cell)), "Building blocks driveable road");
                         Require(Vector3.Distance(city.Roads.GetCellCenterWorld(cell), level.obstacles.GetCellCenterWorld(cell)) < 0.001f, "City grid alignment " + number);
                         checkedCells++;
@@ -222,11 +223,37 @@ public static class CityTilemapSetup
         foreach (string name in new[] { "CityPalette", "CityBuildingsPalette" })
             Require(AssetDatabase.LoadAllAssetsAtPath(Root + "/" + name + ".prefab").OfType<GridPalette>().Any(), "Native Unity Tile Palette " + name);
         CarSpriteSetup.Validate();
-        File.WriteAllText("CityReports/unity-validation.txt", "PASS: 60 sprites; 52 Tile assets; 2 native Tile Palettes; 99 levels / " + checkedCells + " cells; correct road/obstacle separation, curb masks, grid alignment, no props on roads, repeatable rebuild; both four-frame car prefabs.\n");
+        File.WriteAllText("CityReports/unity-validation.txt", "PASS: 300 sprites; 292 Tile assets; 2 native Tile Palettes; 99 levels / " + checkedCells + " cells; correct road/obstacle separation, curb masks, grid alignment, no props on roads, repeatable rebuild; both four-frame car prefabs.\n");
     }
 
     public static void ConfigureAndBuildDevelopment() { Configure(); Build(true); }
     public static void BuildRelease() { Validate(); Build(false); }
+
+    public static void ValidateNeighborSelection()
+    {
+        var root = new GameObject("Eight-neighbor mask verification", typeof(Grid), typeof(NativeLevel));
+        var child = new GameObject("Obstacles", typeof(Tilemap));
+        child.transform.SetParent(root.transform, false);
+        var tile = ScriptableObject.CreateInstance<Tile>();
+        try
+        {
+            var level = root.GetComponent<NativeLevel>();
+            level.rows = level.columns = 5;
+            level.obstacles = child.GetComponent<Tilemap>();
+            int[] dx = { 0, 1, 0, -1, 1, 1, -1, -1 };
+            int[] dy = { -1, 0, 1, 0, -1, 1, 1, -1 };
+            for (int mask = 0; mask < 256; mask++)
+            {
+                level.obstacles.ClearAllTiles();
+                level.obstacles.SetTile(NativeLevel.ToCell(2, 2), tile);
+                for (int i = 0; i < 8; i++)
+                    if ((mask & (1 << i)) == 0)
+                        level.obstacles.SetTile(NativeLevel.ToCell(2 + dx[i], 2 + dy[i]), tile);
+                Require(CityLevelVisuals.SidewalkMask(level, 2, 2) == mask, "8-neighbor mapping " + mask);
+            }
+        }
+        finally { UnityEngine.Object.DestroyImmediate(root); UnityEngine.Object.DestroyImmediate(tile); }
+    }
 
     private static void Build(bool development)
     {

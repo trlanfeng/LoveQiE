@@ -9,223 +9,1903 @@
         {
           "name": "asphalt_00",
           "x": 2,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "asphalt_01",
           "x": 134,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "asphalt_02",
           "x": 266,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "asphalt_03",
           "x": 398,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_00",
           "x": 530,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_01",
           "x": 662,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_02",
           "x": 794,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_03",
           "x": 926,
-          "y": 530,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_04",
-          "x": 2,
-          "y": 398,
+          "x": 1058,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_05",
-          "x": 134,
-          "y": 398,
+          "x": 1190,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_06",
-          "x": 266,
-          "y": 398,
+          "x": 1322,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_07",
-          "x": 398,
-          "y": 398,
+          "x": 1454,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_08",
-          "x": 530,
-          "y": 398,
+          "x": 1586,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_09",
-          "x": 662,
-          "y": 398,
+          "x": 1718,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_10",
-          "x": 794,
-          "y": 398,
+          "x": 1850,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_11",
-          "x": 926,
-          "y": 398,
+          "x": 1982,
+          "y": 2246,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_12",
           "x": 2,
-          "y": 266,
+          "y": 2114,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_13",
           "x": 134,
-          "y": 266,
+          "y": 2114,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_14",
           "x": 266,
-          "y": 266,
+          "y": 2114,
           "width": 128,
           "height": 128
         },
         {
           "name": "sidewalk_15",
           "x": 398,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_16",
+          "x": 530,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_17",
+          "x": 662,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_18",
+          "x": 794,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_19",
+          "x": 926,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_20",
+          "x": 1058,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_21",
+          "x": 1190,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_22",
+          "x": 1322,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_23",
+          "x": 1454,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_24",
+          "x": 1586,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_25",
+          "x": 1718,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_26",
+          "x": 1850,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_27",
+          "x": 1982,
+          "y": 2114,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_28",
+          "x": 2,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_29",
+          "x": 134,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_30",
+          "x": 266,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_31",
+          "x": 398,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_32",
+          "x": 530,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_33",
+          "x": 662,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_34",
+          "x": 794,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_35",
+          "x": 926,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_36",
+          "x": 1058,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_37",
+          "x": 1190,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_38",
+          "x": 1322,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_39",
+          "x": 1454,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_40",
+          "x": 1586,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_41",
+          "x": 1718,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_42",
+          "x": 1850,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_43",
+          "x": 1982,
+          "y": 1982,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_44",
+          "x": 2,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_45",
+          "x": 134,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_46",
+          "x": 266,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_47",
+          "x": 398,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_48",
+          "x": 530,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_49",
+          "x": 662,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_50",
+          "x": 794,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_51",
+          "x": 926,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_52",
+          "x": 1058,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_53",
+          "x": 1190,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_54",
+          "x": 1322,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_55",
+          "x": 1454,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_56",
+          "x": 1586,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_57",
+          "x": 1718,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_58",
+          "x": 1850,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_59",
+          "x": 1982,
+          "y": 1850,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_60",
+          "x": 2,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_61",
+          "x": 134,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_62",
+          "x": 266,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_63",
+          "x": 398,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_64",
+          "x": 530,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_65",
+          "x": 662,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_66",
+          "x": 794,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_67",
+          "x": 926,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_68",
+          "x": 1058,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_69",
+          "x": 1190,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_70",
+          "x": 1322,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_71",
+          "x": 1454,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_72",
+          "x": 1586,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_73",
+          "x": 1718,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_74",
+          "x": 1850,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_75",
+          "x": 1982,
+          "y": 1718,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_76",
+          "x": 2,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_77",
+          "x": 134,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_78",
+          "x": 266,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_79",
+          "x": 398,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_80",
+          "x": 530,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_81",
+          "x": 662,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_82",
+          "x": 794,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_83",
+          "x": 926,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_84",
+          "x": 1058,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_85",
+          "x": 1190,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_86",
+          "x": 1322,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_87",
+          "x": 1454,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_88",
+          "x": 1586,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_89",
+          "x": 1718,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_90",
+          "x": 1850,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_91",
+          "x": 1982,
+          "y": 1586,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_92",
+          "x": 2,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_93",
+          "x": 134,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_94",
+          "x": 266,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_95",
+          "x": 398,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_96",
+          "x": 530,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_97",
+          "x": 662,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_98",
+          "x": 794,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_99",
+          "x": 926,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_100",
+          "x": 1058,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_101",
+          "x": 1190,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_102",
+          "x": 1322,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_103",
+          "x": 1454,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_104",
+          "x": 1586,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_105",
+          "x": 1718,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_106",
+          "x": 1850,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_107",
+          "x": 1982,
+          "y": 1454,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_108",
+          "x": 2,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_109",
+          "x": 134,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_110",
+          "x": 266,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_111",
+          "x": 398,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_112",
+          "x": 530,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_113",
+          "x": 662,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_114",
+          "x": 794,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_115",
+          "x": 926,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_116",
+          "x": 1058,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_117",
+          "x": 1190,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_118",
+          "x": 1322,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_119",
+          "x": 1454,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_120",
+          "x": 1586,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_121",
+          "x": 1718,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_122",
+          "x": 1850,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_123",
+          "x": 1982,
+          "y": 1322,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_124",
+          "x": 2,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_125",
+          "x": 134,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_126",
+          "x": 266,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_127",
+          "x": 398,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_128",
+          "x": 530,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_129",
+          "x": 662,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_130",
+          "x": 794,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_131",
+          "x": 926,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_132",
+          "x": 1058,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_133",
+          "x": 1190,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_134",
+          "x": 1322,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_135",
+          "x": 1454,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_136",
+          "x": 1586,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_137",
+          "x": 1718,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_138",
+          "x": 1850,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_139",
+          "x": 1982,
+          "y": 1190,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_140",
+          "x": 2,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_141",
+          "x": 134,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_142",
+          "x": 266,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_143",
+          "x": 398,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_144",
+          "x": 530,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_145",
+          "x": 662,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_146",
+          "x": 794,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_147",
+          "x": 926,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_148",
+          "x": 1058,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_149",
+          "x": 1190,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_150",
+          "x": 1322,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_151",
+          "x": 1454,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_152",
+          "x": 1586,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_153",
+          "x": 1718,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_154",
+          "x": 1850,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_155",
+          "x": 1982,
+          "y": 1058,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_156",
+          "x": 2,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_157",
+          "x": 134,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_158",
+          "x": 266,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_159",
+          "x": 398,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_160",
+          "x": 530,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_161",
+          "x": 662,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_162",
+          "x": 794,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_163",
+          "x": 926,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_164",
+          "x": 1058,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_165",
+          "x": 1190,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_166",
+          "x": 1322,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_167",
+          "x": 1454,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_168",
+          "x": 1586,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_169",
+          "x": 1718,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_170",
+          "x": 1850,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_171",
+          "x": 1982,
+          "y": 926,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_172",
+          "x": 2,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_173",
+          "x": 134,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_174",
+          "x": 266,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_175",
+          "x": 398,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_176",
+          "x": 530,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_177",
+          "x": 662,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_178",
+          "x": 794,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_179",
+          "x": 926,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_180",
+          "x": 1058,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_181",
+          "x": 1190,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_182",
+          "x": 1322,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_183",
+          "x": 1454,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_184",
+          "x": 1586,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_185",
+          "x": 1718,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_186",
+          "x": 1850,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_187",
+          "x": 1982,
+          "y": 794,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_188",
+          "x": 2,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_189",
+          "x": 134,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_190",
+          "x": 266,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_191",
+          "x": 398,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_192",
+          "x": 530,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_193",
+          "x": 662,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_194",
+          "x": 794,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_195",
+          "x": 926,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_196",
+          "x": 1058,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_197",
+          "x": 1190,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_198",
+          "x": 1322,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_199",
+          "x": 1454,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_200",
+          "x": 1586,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_201",
+          "x": 1718,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_202",
+          "x": 1850,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_203",
+          "x": 1982,
+          "y": 662,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_204",
+          "x": 2,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_205",
+          "x": 134,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_206",
+          "x": 266,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_207",
+          "x": 398,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_208",
+          "x": 530,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_209",
+          "x": 662,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_210",
+          "x": 794,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_211",
+          "x": 926,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_212",
+          "x": 1058,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_213",
+          "x": 1190,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_214",
+          "x": 1322,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_215",
+          "x": 1454,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_216",
+          "x": 1586,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_217",
+          "x": 1718,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_218",
+          "x": 1850,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_219",
+          "x": 1982,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_220",
+          "x": 2,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_221",
+          "x": 134,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_222",
+          "x": 266,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_223",
+          "x": 398,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_224",
+          "x": 530,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_225",
+          "x": 662,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_226",
+          "x": 794,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_227",
+          "x": 926,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_228",
+          "x": 1058,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_229",
+          "x": 1190,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_230",
+          "x": 1322,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_231",
+          "x": 1454,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_232",
+          "x": 1586,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_233",
+          "x": 1718,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_234",
+          "x": 1850,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_235",
+          "x": 1982,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_236",
+          "x": 2,
           "y": 266,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_00",
+          "name": "sidewalk_237",
+          "x": 134,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_238",
+          "x": 266,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_239",
+          "x": 398,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_240",
           "x": 530,
           "y": 266,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_01",
+          "name": "sidewalk_241",
           "x": 662,
           "y": 266,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_02",
+          "name": "sidewalk_242",
           "x": 794,
           "y": 266,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_03",
+          "name": "sidewalk_243",
           "x": 926,
           "y": 266,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_04",
+          "name": "sidewalk_244",
+          "x": 1058,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_245",
+          "x": 1190,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_246",
+          "x": 1322,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_247",
+          "x": 1454,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_248",
+          "x": 1586,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_249",
+          "x": 1718,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_250",
+          "x": 1850,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_251",
+          "x": 1982,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_252",
           "x": 2,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_05",
+          "name": "sidewalk_253",
           "x": 134,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_06",
+          "name": "sidewalk_254",
           "x": 266,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_07",
+          "name": "sidewalk_255",
           "x": 398,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_08",
+          "name": "lane_00",
           "x": 530,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_09",
+          "name": "lane_01",
           "x": 662,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_10",
+          "name": "lane_02",
           "x": 794,
           "y": 134,
           "width": 128,
           "height": 128
         },
         {
-          "name": "lane_11",
+          "name": "lane_03",
           "x": 926,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_04",
+          "x": 1058,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_05",
+          "x": 1190,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_06",
+          "x": 1322,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_07",
+          "x": 1454,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_08",
+          "x": 1586,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_09",
+          "x": 1718,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_10",
+          "x": 1850,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_11",
+          "x": 1982,
           "y": 134,
           "width": 128,
           "height": 128
