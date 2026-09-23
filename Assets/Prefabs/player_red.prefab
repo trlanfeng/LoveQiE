@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 375c820eb19e1d54daf4cab209c85548, type: 3}
+  m_Sprite: {fileID: 394462288, guid: d195158ccb6cf96448f3700fb21bd7ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier:
   driveFrames:
-  - {fileID: 21300000, guid: 375c820eb19e1d54daf4cab209c85548, type: 3}
-  - {fileID: 21300000, guid: 63ba0054b30f08346bfeb84d581a8bb7, type: 3}
-  - {fileID: 21300000, guid: 2773092a630356447a59f3021a5c362a, type: 3}
-  - {fileID: 21300000, guid: f18b663ea450f3b4a9404fc42d423666, type: 3}
+  - {fileID: 394462288, guid: d195158ccb6cf96448f3700fb21bd7ad, type: 3}
+  - {fileID: 560087759, guid: d195158ccb6cf96448f3700fb21bd7ad, type: 3}
+  - {fileID: 552151682, guid: d195158ccb6cf96448f3700fb21bd7ad, type: 3}
+  - {fileID: 396670453, guid: d195158ccb6cf96448f3700fb21bd7ad, type: 3}
   framesPerSecond: 20

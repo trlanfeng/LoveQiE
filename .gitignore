@@ -11,3 +11,5 @@
 # Local builds and editor logs
 [Bb]uilds/
 [Ll]ogs/
+.codely-cli
+.codely.packages

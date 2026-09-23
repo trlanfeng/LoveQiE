@@ -1,5 +1,7 @@
 # 红、绿小汽车角色
 
+当前版本已采用城市手绘风格汽车，资源位于 `Assets/CityTiles/Textures/city_cars.png`，两个预制体已改用其中的序列帧。完整图集、调色板、地图编辑与新验证材料见 [CITY-TILEMAP.md](CITY-TILEMAP.md)。下文独立 PNG 与原画路径保留为首版汽车资料；重新配置时如存在城市汽车切片，会优先使用新图集。
+
 打开 `Assets/main.unity` 并 Play。`player_red`、`player_green` 预制体分别使用红色、绿色小汽车，继续使用原来的镜像操作、格子移动、障碍与通关规则。
 
 ## 动画行为与编辑

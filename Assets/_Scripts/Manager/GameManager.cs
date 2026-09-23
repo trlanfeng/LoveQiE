@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         // Normalize editor-only offsets so every level aligns with the persistent floor.
         sceneInstance.transform.position = new Vector3(0, 0, 1);
         CurrentLevel = sceneInstance.GetComponent<NativeLevel>();
+        CityLevelVisuals.Apply(CurrentLevel);
         CurrentScene = number;
         left.ResetAt(CurrentLevel.CellCenter(7, 10));
         right.ResetAt(CurrentLevel.CellCenter(9, 10));

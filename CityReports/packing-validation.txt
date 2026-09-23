@@ -1,0 +1,1 @@
+PASS: 60 uniquely named RGBA atlas slices, correct bounds, opaque asphalt, transparent object margins and extruded gutters.

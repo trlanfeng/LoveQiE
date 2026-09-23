@@ -42,6 +42,7 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
         yield return null;
         var manager = FindObjectOfType<GameManager>();
         Check(manager != null && GameManager.CurrentLevel != null && manager.CurrentScene == 1, "Main scene boots level 1");
+        CheckCityVisuals();
         var left = manager.charactorLeft.GetComponent<CharactorManager>();
         var right = manager.charactorRight.GetComponent<CharactorManager>();
         yield return CheckCars(manager, left, right);
@@ -79,6 +80,7 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
         foreach (Solution solution in solutions.levels)
         {
             Check(manager.LoadLevel(solution.number), "Load level " + solution.number);
+            CheckCityVisuals();
             yield return null;
             Check(!GameManager.CurrentLevel.IsBlocked(7, 10) && !GameManager.CurrentLevel.IsBlocked(9, 10), "Spawn cells clear " + solution.number);
             foreach (char key in solution.steps)
@@ -104,6 +106,23 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
         Check(errors.Count == 0, "No runtime exceptions/errors");
         Finish(true);
     }
+    private void CheckCityVisuals()
+    {
+        var level = GameManager.CurrentLevel;
+        var city = level.GetComponent<CityLevelVisuals>();
+        Check(city != null && city.Roads != null && city.Sidewalks != null, "City theme loaded");
+        for (int y = 0; y < level.rows; y++)
+            for (int x = 0; x < level.columns; x++)
+            {
+                var cell = NativeLevel.ToCell(x, y);
+                bool blocked = level.IsBlocked(x, y);
+                Check(city.Roads.HasTile(cell) == !blocked && city.Sidewalks.HasTile(cell) == blocked,
+                    "City artwork agrees with collision cell " + cell);
+                Check(blocked || (!city.Buildings.HasTile(cell) && !city.Decorations.HasTile(cell)),
+                    "Drivable cells have no building or decorative obstruction");
+            }
+    }
+
     private IEnumerator CheckCars(GameManager manager, CharactorManager left, CharactorManager right)
     {
         var red = left.GetComponent<CarSpriteAnimator>();

@@ -12,6 +12,13 @@ public static class CarSpriteSetup
     public static void Configure()
     {
         AssetDatabase.Refresh();
+        if (CityTilemapSetup.HasCitySprites)
+        {
+            CityTilemapSetup.ConfigureCars();
+            AssetDatabase.SaveAssets();
+            Validate();
+            return;
+        }
         foreach (string color in new[] { "red", "green" })
         {
             var frames = new Sprite[4];

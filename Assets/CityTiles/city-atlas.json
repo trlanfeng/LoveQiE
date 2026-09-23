@@ -1,0 +1,447 @@
+{
+  "tileSize": 128,
+  "padding": 2,
+  "pixelsPerUnit": 128,
+  "atlases": [
+    {
+      "file": "city_terrain.png",
+      "sprites": [
+        {
+          "name": "asphalt_00",
+          "x": 2,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "asphalt_01",
+          "x": 134,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "asphalt_02",
+          "x": 266,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "asphalt_03",
+          "x": 398,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_00",
+          "x": 530,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_01",
+          "x": 662,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_02",
+          "x": 794,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_03",
+          "x": 926,
+          "y": 530,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_04",
+          "x": 2,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_05",
+          "x": 134,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_06",
+          "x": 266,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_07",
+          "x": 398,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_08",
+          "x": 530,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_09",
+          "x": 662,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_10",
+          "x": 794,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_11",
+          "x": 926,
+          "y": 398,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_12",
+          "x": 2,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_13",
+          "x": 134,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_14",
+          "x": 266,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "sidewalk_15",
+          "x": 398,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_00",
+          "x": 530,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_01",
+          "x": 662,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_02",
+          "x": 794,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_03",
+          "x": 926,
+          "y": 266,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_04",
+          "x": 2,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_05",
+          "x": 134,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_06",
+          "x": 266,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_07",
+          "x": 398,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_08",
+          "x": 530,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_09",
+          "x": 662,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_10",
+          "x": 794,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_11",
+          "x": 926,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_12",
+          "x": 2,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_13",
+          "x": 134,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_14",
+          "x": 266,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "lane_15",
+          "x": 398,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "crosswalk_ns",
+          "x": 530,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "crosswalk_ew",
+          "x": 662,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "parking_red",
+          "x": 794,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "parking_green",
+          "x": 926,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        }
+      ]
+    },
+    {
+      "file": "city_buildings.png",
+      "sprites": [
+        {
+          "name": "house_terracotta",
+          "x": 2,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "house_slate",
+          "x": 134,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "house_sage",
+          "x": 266,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "apartment_cream",
+          "x": 398,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "cafe",
+          "x": 2,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "bakery",
+          "x": 134,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "clinic",
+          "x": 266,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "shop",
+          "x": 398,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        }
+      ]
+    },
+    {
+      "file": "city_props.png",
+      "sprites": [
+        {
+          "name": "tree",
+          "x": 2,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "streetlamp",
+          "x": 134,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "bench",
+          "x": 266,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "planter",
+          "x": 398,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        }
+      ]
+    },
+    {
+      "file": "city_cars.png",
+      "sprites": [
+        {
+          "name": "car_red_00",
+          "x": 2,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_red_01",
+          "x": 134,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_red_02",
+          "x": 266,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_red_03",
+          "x": 398,
+          "y": 134,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_green_00",
+          "x": 2,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_green_01",
+          "x": 134,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_green_02",
+          "x": 266,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        },
+        {
+          "name": "car_green_03",
+          "x": 398,
+          "y": 2,
+          "width": 128,
+          "height": 128
+        }
+      ]
+    }
+  ]
+}

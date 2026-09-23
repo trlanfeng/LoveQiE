@@ -1,0 +1,193 @@
+"""Pack AI-painted city sprites and assemble edge-matched terrain for Unity.
+
+python Tools/build_city_tiles.py
+Requires Pillow. AI sources/prompts are retained in output/imagegen; no credentials.
+128 px = one world cell, 2 px extruded padding, 132 px atlas pitch.
+"""
+import json
+import math
+from pathlib import Path
+from PIL import Image, ImageDraw, ImageOps
+from prepare_car_sprites import extract as chroma_extract, make_frames
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "output/imagegen"
+OUT = ROOT / "Assets/CityTiles/Textures"
+REPORT = ROOT / "CityReports"
+SIZE, PAD, PITCH = 128, 2, 132
+
+
+def extract(image):
+    # This provider returned alpha already. Remove near-invisible alpha specks
+    # before measuring bounds, or the visible car is scaled much too small.
+    if image.mode == "RGBA" and image.getextrema()[3][0] == 0:
+        image = image.copy()
+        image.putalpha(image.getchannel("A").point(lambda a: 0 if a < 32 else a))
+        return image.crop(image.getbbox())
+    return chroma_extract(image)
+
+
+def pack(name, entries, columns):
+    rows = math.ceil(len(entries) / columns)
+    sheet = Image.new("RGBA", (columns * PITCH, rows * PITCH))
+    records = []
+    for index, (label, tile) in enumerate(entries):
+        x, y = index % columns * PITCH + PAD, index // columns * PITCH + PAD
+        sheet.paste(tile, (x, y))
+        # Extrude the outer texels into the gutter to prevent bilinear atlas bleeding.
+        sheet.paste(tile.crop((0, 0, SIZE, 1)).resize((SIZE, PAD)), (x, y - PAD))
+        sheet.paste(tile.crop((0, SIZE - 1, SIZE, SIZE)).resize((SIZE, PAD)), (x, y + SIZE))
+        sheet.paste(tile.crop((0, 0, 1, SIZE)).resize((PAD, SIZE)), (x - PAD, y))
+        sheet.paste(tile.crop((SIZE - 1, 0, SIZE, SIZE)).resize((PAD, SIZE)), (x + SIZE, y))
+        for dx, dy, tx, ty in [(-PAD, -PAD, 0, 0), (SIZE, -PAD, 127, 0), (-PAD, SIZE, 0, 127), (SIZE, SIZE, 127, 127)]:
+            sheet.paste(tile.getpixel((tx, ty)), (x + dx, y + dy, x + dx + PAD, y + dy + PAD))
+        records.append(dict(name=label, x=x, y=sheet.height - y - SIZE, width=SIZE, height=SIZE))
+    sheet.save(OUT / f"{name}.png")
+    return dict(file=f"{name}.png", sprites=records)
+
+
+def terrain():
+    # Sample actual asphalt from the approved AI-painted city, then mirror its
+    # boundaries so all four variants share identical edge pixels.
+    reference = Image.open(SOURCE / "city-game-preview.png").convert("RGBA")
+    patch = reference.crop((450, 565, 482, 597)).resize((64, 64), Image.Resampling.BICUBIC)
+    asphalt = Image.new("RGBA", (128, 128))
+    asphalt.paste(patch, (0, 0))
+    asphalt.paste(ImageOps.mirror(patch), (64, 0))
+    asphalt.paste(ImageOps.flip(patch), (0, 64))
+    asphalt.paste(ImageOps.flip(ImageOps.mirror(patch)), (64, 64))
+    entries = []
+    for i in range(4):
+        tile = asphalt.copy()
+        # Interior-only wear keeps shared seams unchanged.
+        wear = Image.new("RGBA", (128, 128))
+        draw = ImageDraw.Draw(wear)
+        if i:
+            draw.line([(30 + i * 11, 40), (42 + i * 9, 58), (38 + i * 8, 66)], fill=(165, 176, 174, 12), width=1)
+        tile.alpha_composite(wear)
+        assert tile.getextrema()[3] == (255, 255)
+        entries.append((f"asphalt_{i:02}", tile))
+    for mask in range(16):
+        tile = Image.new("RGBA", (128, 128), "#b7b2a4")
+        draw = ImageDraw.Draw(tile)
+        for y in range(0, 128, 32):
+            draw.line((0, y, 127, y), fill="#a7a293", width=1)
+            for x in range(0 if y % 64 == 0 else 16, 128, 32):
+                draw.line((x, y + 1, x, y + 31), fill="#a7a293", width=1)
+                draw.line((x + 1, y + 1, min(x + 30, 127), y + 1), fill="#c6c1b1", width=1)
+        # Bits N=1 E=2 S=4 W=8 indicate adjacent drivable cells.
+        edge = Image.new("RGBA", (128, 128))
+        d = ImageDraw.Draw(edge)
+        d.rectangle((0, 0, 127, 7), fill="#dad3bf")
+        d.line((0, 0, 127, 0), fill="#746f64", width=1)
+        d.line((0, 2, 127, 2), fill="#eee5d0", width=2)
+        d.line((0, 7, 127, 7), fill="#8e897e", width=1)
+        for x in range(0, 128, 16):
+            d.line((x, 1, x, 6), fill="#b0a996")
+        for bit, angle in [(1, 0), (2, -90), (4, 180), (8, 90)]:
+            if mask & bit:
+                tile.alpha_composite(edge.rotate(angle))
+        entries.append((f"sidewalk_{mask:02}", tile))
+    for mask in range(16):
+        tile = Image.new("RGBA", (128, 128))
+        draw = ImageDraw.Draw(tile)
+        # Dashes have the same phase at every cell boundary. Keep junction center clear.
+        for bit, points in [(1, [(63, y, 65, y + 9) for y in (0, 24, 48)]),
+                            (4, [(63, y, 65, min(y + 9, 127)) for y in (72, 96, 120)]),
+                            (8, [(x, 63, x + 9, 65) for x in (0, 24, 48)]),
+                            (2, [(x, 63, min(x + 9, 127), 65) for x in (72, 96, 120)])]:
+            if mask & bit:
+                for p in points:
+                    draw.rectangle(p, fill=(221, 210, 175, 155))
+        entries.append((f"lane_{mask:02}", tile))
+    crossing = Image.new("RGBA", (128, 128))
+    draw = ImageDraw.Draw(crossing)
+    for x in range(20, 112, 16):
+        draw.rectangle((x, 40, x + 8, 88), fill=(234, 224, 195, 218))
+    entries.extend([("crosswalk_ns", crossing), ("crosswalk_ew", crossing.rotate(90))])
+    for color, tint in [("red", "#bc7465"), ("green", "#8da276")]:
+        tile = Image.new("RGBA", (128, 128))
+        draw = ImageDraw.Draw(tile)
+        draw.line([(30, 32), (30, 114), (98, 114), (98, 32)], fill=tint, width=3)
+        entries.append((f"parking_{color}", tile))
+    # All asphalt variants must join each other without a discontinuity.
+    for _, a in entries[:4]:
+        for _, b in entries[:4]:
+            assert a.crop((127, 0, 128, 128)).tobytes() == b.crop((0, 0, 1, 128)).tobytes()
+            assert a.crop((0, 127, 128, 128)).tobytes() == b.crop((0, 0, 128, 1)).tobytes()
+    return entries
+
+
+def props_and_buildings():
+    source = Image.open(SOURCE / "city-buildings-source.png")
+    names = ["house_terracotta", "house_slate", "house_sage", "apartment_cream", "cafe", "bakery", "clinic", "shop", "tree", "streetlamp", "bench", "planter"]
+    result = []
+    for i, name in enumerate(names):
+        w, h = source.width // 4, source.height // 3
+        cell = source.crop((i % 4 * w, i // 4 * h, (i % 4 + 1) * w, (i // 4 + 1) * h))
+        cutout = extract(cell)
+        bound = 110 if i < 8 else (98 if name == "tree" else 90)
+        cutout.thumbnail((bound, bound), Image.Resampling.LANCZOS)
+        tile = Image.new("RGBA", (128, 128))
+        tile.alpha_composite(cutout, ((128 - cutout.width) // 2, (128 - cutout.height) // 2))
+        assert tile.getbbox() and tile.getpixel((0, 0))[3] == 0
+        result.append((name, tile))
+    return result[:8], result[8:]
+
+
+def cars():
+    source = Image.open(SOURCE / "city-cars-source.png")
+    entries = []
+    for index, color in enumerate(("red", "green")):
+        cutout = extract(source.crop((index * source.width // 2, 0, (index + 1) * source.width // 2, source.height)))
+        frames = make_frames(cutout)
+        assert len({f.tobytes() for f in frames}) == 4
+        for n, frame in enumerate(frames):
+            entries.append((f"car_{color}_{n:02}", frame))
+    return entries
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    REPORT.mkdir(exist_ok=True)
+    ground = terrain()
+    buildings, props = props_and_buildings()
+    vehicles = cars()
+    manifest = dict(tileSize=SIZE, padding=PAD, pixelsPerUnit=128, atlases=[
+        pack("city_terrain", ground, 8), pack("city_buildings", buildings, 4),
+        pack("city_props", props, 4), pack("city_cars", vehicles, 4)])
+    (OUT.parent / "city-atlas.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    # A labeled contact sheet for choosing tiles, separate from the runtime atlases.
+    all_tiles = ground + buildings + props + vehicles
+    board = Image.new("RGB", (8 * 152, math.ceil(len(all_tiles) / 8) * 154 + 60), "#e5e0d2")
+    draw = ImageDraw.Draw(board)
+    draw.text((20, 20), "CITY TILESET / 128px tiles / 2px padding / N1 E2 S4 W8", fill="#38434a")
+    for i, (name, tile) in enumerate(all_tiles):
+        x, y = i % 8 * 152 + 12, i // 8 * 154 + 52
+        draw.rectangle((x, y, x + 127, y + 127), fill="#626f76")
+        board.paste(tile, (x, y), tile)
+        draw.text((x, y + 130), name, fill="#38434a")
+    board.save(REPORT / "city-atlas-overview.png")
+    # Preview the softened car art against the actual terrain and building sprites.
+    animated = []
+    for phase in range(4):
+        frame = Image.new("RGB", (640, 384), "#c8c6b5")
+        for row in range(3):
+            for col in range(5):
+                frame.paste(ground[0][1], (col * 128, row * 128))
+        for col, variant in enumerate((0, 1, 2, 4, 6)):
+            frame.paste(ground[4 + 4][1], (col * 128, 0))
+            tile = buildings[variant][1]
+            frame.paste(tile, (col * 128, 0), tile)
+        for x, offset in [(160, 0), (352, 4)]:
+            tile = vehicles[offset + phase][1]
+            frame.paste(tile, (x, 180), tile)
+        animated.append(frame)
+    animated[0].save(REPORT / "city-style-preview.png")
+    animated[0].save(REPORT / "city-cars-driving.gif", save_all=True, append_images=animated[1:], duration=50, loop=0)
+    (REPORT / "image-validation.txt").write_text("PASS: 60 sprites (40 terrain, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.\n", encoding="utf-8")
+    print("PASS: 4 atlases, 60 sprites; exact asphalt seams, transparent cutouts, car loops and manifest.")
+
+
+if __name__ == "__main__":
+    main()

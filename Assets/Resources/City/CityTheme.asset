@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270f1905c82e7f542ba990d062dd0d65, type: 3}
+  m_Name: CityTheme
+  m_EditorClassIdentifier: 
+  asphalt:
+  - {fileID: 11400000, guid: 4aba8b407d763d445921a50a1193c6b2, type: 2}
+  - {fileID: 11400000, guid: 4942dafab6c450b43bc2f9ac9e102684, type: 2}
+  - {fileID: 11400000, guid: 28f1343e18462994195c93941696ac90, type: 2}
+  - {fileID: 11400000, guid: fd9abbbd64d3a7448b3800b9b51ce141, type: 2}
+  sidewalks:
+  - {fileID: 11400000, guid: d6131f329f0019b4a88e1632401a20e8, type: 2}
+  - {fileID: 11400000, guid: fa9010b8b3f38594783698f25338ad5f, type: 2}
+  - {fileID: 11400000, guid: f8b1c995bc1c34a43825cd786df032ea, type: 2}
+  - {fileID: 11400000, guid: ffdd37ece2b75d94f8a7c673f585a383, type: 2}
+  - {fileID: 11400000, guid: 840a9fbb083495a4dba4b56ed40b0dfc, type: 2}
+  - {fileID: 11400000, guid: 79a3012d8c5572c439fd8ee01cc48ccf, type: 2}
+  - {fileID: 11400000, guid: 82fbd78a6226d374182c495fcbc6ded8, type: 2}
+  - {fileID: 11400000, guid: 6bca2a00f8ba43f45b57756662548c5f, type: 2}
+  - {fileID: 11400000, guid: 5efe621db8e8d86449bab8c0ab176041, type: 2}
+  - {fileID: 11400000, guid: ae72e3adc6b6a5b4c8fe59f66876b931, type: 2}
+  - {fileID: 11400000, guid: db88e7df38cb5a04f8e57b069f09321e, type: 2}
+  - {fileID: 11400000, guid: ee48690b2a9337e4496e7adb3fc64ade, type: 2}
+  - {fileID: 11400000, guid: 45d4e04645794324db61db4dbdefaa5b, type: 2}
+  - {fileID: 11400000, guid: 017a0542dec70c444996050de80d314f, type: 2}
+  - {fileID: 11400000, guid: 568da7de972b3d24c973d5b3b57ab4b8, type: 2}
+  - {fileID: 11400000, guid: 1b9d5d9dca9e06149aa9cb8adc8a8df9, type: 2}
+  lanes:
+  - {fileID: 11400000, guid: 1041005e9f406f144aa5701ede868016, type: 2}
+  - {fileID: 11400000, guid: ec74fa26846662d4f889253f2f07edf3, type: 2}
+  - {fileID: 11400000, guid: 7bfae38c2b224fc499144d3e99875440, type: 2}
+  - {fileID: 11400000, guid: 53f971a016a87774fa9c58a23592203c, type: 2}
+  - {fileID: 11400000, guid: 1f8e5ee824b4bf345bedb009dfe72d41, type: 2}
+  - {fileID: 11400000, guid: f4afca63de1c66d40afec5fbdb93aebd, type: 2}
+  - {fileID: 11400000, guid: db51509a9b0ee5248ac8d2be90a875df, type: 2}
+  - {fileID: 11400000, guid: d8fa673d619caa948b15dd184c36d70b, type: 2}
+  - {fileID: 11400000, guid: 5657954ff1730604a86b68923bdcf7d5, type: 2}
+  - {fileID: 11400000, guid: 2ac6c214a46d8d1408426aa12a5e2cbf, type: 2}
+  - {fileID: 11400000, guid: 5820456be52d6344ab5ae557a2a58030, type: 2}
+  - {fileID: 11400000, guid: aeea586cc0cf5fc43aeee374c7347bb6, type: 2}
+  - {fileID: 11400000, guid: 1ab765450ce647e4ba1fe511a110b693, type: 2}
+  - {fileID: 11400000, guid: 645648562cf1abe4da85cb0c3f6955fa, type: 2}
+  - {fileID: 11400000, guid: 00602ad10f74fd2408161f0c14e6932f, type: 2}
+  - {fileID: 11400000, guid: 6f1ad714d028f804d940383338b1994f, type: 2}
+  buildings:
+  - {fileID: 11400000, guid: 6baf827597769994bb362a9d5d7449c1, type: 2}
+  - {fileID: 11400000, guid: 25bc791ad1d29bc45a53e7006818d8ba, type: 2}
+  - {fileID: 11400000, guid: 6d6173753f53dc2428472b9db4f1eae3, type: 2}
+  - {fileID: 11400000, guid: c25556372960e5942ba5445d5fe1b148, type: 2}
+  - {fileID: 11400000, guid: e3d90a6b182c67a4b84e5530e7e5aa0c, type: 2}
+  - {fileID: 11400000, guid: 891afa8c4b1ea9c46ba4479412ab3a19, type: 2}
+  - {fileID: 11400000, guid: 651db29adee463748b10b76f19342482, type: 2}
+  - {fileID: 11400000, guid: b6b373e3e651a8a45b233188ae843aa5, type: 2}
+  props:
+  - {fileID: 11400000, guid: 4365b54e85b3385498194c810baf7276, type: 2}
+  - {fileID: 11400000, guid: e8c3cba82d2e0fe4a9b72eb90a4db2fc, type: 2}
+  - {fileID: 11400000, guid: 23228d46cd827d345bb0fe934d019ef5, type: 2}
+  - {fileID: 11400000, guid: 9b28cd67382edd846939b83339202a49, type: 2}
+  crosswalkNorthSouth: {fileID: 11400000, guid: 8cea3ec250199f54f8c0cffe46330114,
+    type: 2}
+  crosswalkEastWest: {fileID: 11400000, guid: f127913839833bb4f876d8a08fbbda28, type: 2}
+  redParking: {fileID: 11400000, guid: f031684054daf444e81668da08edd3fd, type: 2}
+  greenParking: {fileID: 11400000, guid: 252de5feb4cc2cb44afb980750a83ea5, type: 2}
