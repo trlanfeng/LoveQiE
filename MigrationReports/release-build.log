@@ -1,0 +1,686 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-trlanfeng" failed because channel doesn't exist; code: "0x80000002"
+[Licensing::Module] GetFullLicensingClientPath:	 C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/Resources/Licensing/Client/Tuanjie.Licensing.Client.exe
+[Licensing::Module] Successfully launched the LicensingClient (PId: 41508)
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-trlanfeng" at "2026-09-23T05:13:10.1939344Z"
+[Licensing::Client] Error: Code 0 while verifying Licensing Client signature (process Id: 41508, path: "C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/Resources/Licensing/Client/Tuanjie.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Ewh6pS6mAe8qbg==","messageType":"HandshakeRequest","protocolVersion":"1.12","userAgent":"TuanjieEditor/2022.3.61t14 (Windows; U; Windows NT 10.0; zh)","externalCorrelationId":"857464294234349370"} at 1790140390
+[Licensing::Client] Successfully receive message: {"protocolVersion":"1.12","sessionId":"2ee382cfab324dfe874ac422da1bae17","context":{"DeviceName":"MY-PC","DeviceModel":"MS-7E01 (Micro-Star International Co., Ltd.)","PhysicalMemoryMB":"32477","SystemLanguageISO":"zh","ProcessorCount":"24","ProcessorType":"13th Gen Intel(R) Core(TM) i7-13700","OperatingSystem":"Windows 10  (10.0.26200) 64bit","OperatingSystemNumeric":"1000","Legacy.MachineBinding1":"00330-80000-00000-AA674","Legacy.MachineBinding2":"00000_00_000000_00_00D0DD_D0_00D0DD_D0.0","Legacy.MachineBinding4":"RGVmYXVsdCBzdHJpbmc=","Legacy.MachineBinding5":"04:7c:16:87:4a:e7","EnvironmentUser":"trlanfeng","EnvironmentDomain":"MY-PC","EnvironmentHostname":"MY-PC"},"assemblyProductVersion":"1.14.0+76da6ae","machineId":"+nhstU21CyyHh9yxWJ5fOovY55Q=","correlationId":"9d9828500e945b900a4b6d0c438f2b04","responseCode":200,"responseStatus":"Handshake successful","messageType":"HandshakeResponse"} at 1790140390
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.14.0+76da6ae
+  Session Id:              2ee382cfab324dfe874ac422da1bae17
+  Correlation Id:          9d9828500e945b900a4b6d0c438f2b04
+  External correlation Id: 857464294234349370
+  Machine Id:              +nhstU21CyyHh9yxWJ5fOovY55Q=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-trlanfeng" (connect: 2.29s, validation: 0.05s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-trlanfeng-notifications" at "2026-09-23T05:13:10.2956862Z"
+[Licensing::Module] Connected to LicensingClient (PId: 41508, launch time: 0.02, total connection time: 2.39s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"1Dium/xaCmpevA==","messageType":"UpdateLicenseRequest","AccessToken":"","OrgId":"","ProjectId":"","forceUpdateLicense":true} at 1790140390
+[Licensing::Client] Successfully receive message: {"responseCode":200,"responseStatus":"Licenses updated.","messageType":"UpdateLicenseResponse","authorizationCheck":"1Dium/xaCmpevMU2clpTw4AUYRQ/"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140390, endTime: 1790140393)
+[Licensing::Client] Successfully updated license
+Built from 'tuanjie/1.6/staging' branch; Version is '2022.3.61t14 (3a70663b70e0) revision 3829862'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit Professional' Language: 'zh' Physical Memory: 32477 MB
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakWQ==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.legacy.pro","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140393
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakWSQemmSJKzB7M3Qt"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140393, endTime: 1790140393)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "F4-9MP9-ZWAG-QSVY-CHDF-XXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakWQ==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.headless","com.unity.editor.ui"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140393
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.ui","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakWSQemmSJKzB7M3Qt"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140393, endTime: 1790140393)
+[Licensing::Client] Successfully resolved entitlement details
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Tuanjie.exe
+-batchmode
+-projectPath
+D:/game/LoveQiE-without2DToolkit
+-executeMethod
+NativeTilemapMigration.BuildRelease
+-quit
+-logFile
+D:/game/LoveQiE-without2DToolkit/MigrationReports/release-build.log
+Successfully changed project path to: D:/game/LoveQiE-without2DToolkit
+D:/game/LoveQiE-without2DToolkit
+[Memory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [40652]  Target information:
+
+Player connection [40652]  * "[IP] 192.168.1.2 [Port] 55504 [Flags] 2 [Guid] 1574986730 [EditorId] 1574986730 [Version] 1048832 [Id] WindowsEditor(7,MY-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40652]  * "[IP] 192.168.115.1 [Port] 55504 [Flags] 2 [Guid] 1574986730 [EditorId] 1574986730 [Version] 1048832 [Id] WindowsEditor(7,MY-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40652]  * "[IP] 192.168.80.1 [Port] 55504 [Flags] 2 [Guid] 1574986730 [EditorId] 1574986730 [Version] 1048832 [Id] WindowsEditor(7,MY-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40652] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [40652] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+AS: AutoStreaming module initializing.
+Begin write certificate to file.
+Write certificate complete, return 1.
+StartServer, cert is C:/Users/trlanfeng/AppData/Roaming/Tuanjie/20428-rest-certificate.pem
+Start HTTP server port 38000, HTTPS server port 38443.
+[Package Manager] UpmClient::Connect -- Connected to IPC stream "Upm-20428" after 0.0 seconds.
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakWQ==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.last.activation.date","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140393
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.last.activation.date","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakWSQemmSJKzB7M3Qt"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140393, endTime: 1790140393)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakWQ==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.disable-splash-screen","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140393
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakWSQemmSJKzB7M3Qt"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140393, endTime: 1790140393)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakWQ==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.allow-mix-usage","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140393
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakWSQemmSJKzB7M3Qt"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140393, endTime: 1790140393)
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakWQ==","messageType":"EntitlementDetailsRequest","entitlementIds":[],"packageEntitlementIds":["com.unity.modules.ai","com.unity.modules.androidjni","com.unity.modules.animation","com.unity.modules.assetbundle","com.unity.modules.audio","com.unity.modules.cloth","com.unity.modules.director","com.unity.modules.imageconversion","com.unity.modules.imgui","com.unity.modules.infinity","com.unity.modules.jsonserialize","com.unity.modules.particlesystem","com.unity.modules.physics","com.unity.modules.physics2d","com.unity.modules.screencapture","com.unity.modules.terrain","com.unity.modules.terrainphysics","com.unity.modules.tilemap","com.unity.modules.ui","com.unity.modules.uielements","com.unity.modules.unityanalytics","com.unity.modules.unitywebrequest","com.unity.modules.unitywebrequestassetbundle","com.unity.modules.unitywebrequestaudio","com.unity.modules.unitywebrequesttexture","com.unity.modules.unitywebrequestwww","com.unity.modules.vehicles","com.unity.modules.video","com.unity.modules.vr","com.unity.modules.wind","com.unity.modules.xr","com.unity.2d.tilemap","com.unity.2d.sprite","com.unity.modules.subsystems"],"includeCustomData":false} at 1790140393
+[Licensing::Client] Successfully receive message: {"freeEntitlementIds":["com.unity.modules.ai","com.unity.modules.androidjni","com.unity.modules.animation","com.unity.modules.assetbundle","com.unity.modules.audio","com.unity.modules.cloth","com.unity.modules.director","com.unity.modules.imageconversion","com.unity.modules.imgui","com.unity.modules.infinity","com.unity.modules.jsonserialize","com.unity.modules.particlesystem","com.unity.modules.physics","com.unity.modules.physics2d","com.unity.modules.screencapture","com.unity.modules.terrain","com.unity.modules.terrainphysics","com.unity.modules.tilemap","com.unity.modules.ui","com.unity.modules.uielements","com.unity.modules.unityanalytics","com.unity.modules.unitywebrequest","com.unity.modules.unitywebrequestassetbundle","com.unity.modules.unitywebrequestaudio","com.unity.modules.unitywebrequesttexture","com.unity.modules.unitywebrequestwww","com.unity.modules.vehicles","com.unity.modules.video","com.unity.modules.vr","com.unity.modules.wind","com.unity.modules.xr","com.unity.2d.tilemap","com.unity.2d.sprite","com.unity.modules.subsystems"],"responseCode":200,"responseStatus":"Found 0 entitlement groups and 34 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakWSQemmSJKzB7M3Qt"} at 1790140393
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140393, endTime: 1790140393)
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 34 packages:
+  Built-in packages:
+    com.unity.modules.ai@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.ai@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.animation@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.animation@1.0.0)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.assetbundle@1.0.0)
+    com.unity.modules.audio@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.audio@1.0.0)
+    com.unity.modules.cloth@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.cloth@1.0.0)
+    com.unity.modules.director@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.director@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.imageconversion@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.imgui@1.0.0)
+    com.unity.modules.infinity@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.infinity@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.particlesystem@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.physics@1.0.0)
+    com.unity.modules.physics2d@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.physics2d@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.terrain@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.terrain@1.0.0)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0)
+    com.unity.modules.tilemap@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.tilemap@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.ui@1.0.0)
+    com.unity.modules.uielements@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.uielements@1.0.0)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0)
+    com.unity.modules.vehicles@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.vehicles@1.0.0)
+    com.unity.modules.video@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.video@1.0.0)
+    com.unity.modules.vr@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.vr@1.0.0)
+    com.unity.modules.wind@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.wind@1.0.0)
+    com.unity.modules.xr@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.xr@1.0.0)
+    com.unity.2d.tilemap@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.2d.tilemap@1.0.0)
+    com.unity.2d.sprite@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.2d.sprite@1.0.0)
+    com.unity.modules.subsystems@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.subsystems@1.0.0)
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.08 seconds
+[Package Manager] Done resolving packages in 0.40 seconds
+[Package Manager] Registered 34 packages:
+  Built-in packages:
+    com.unity.modules.ai@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.ai@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.animation@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.animation@1.0.0)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.assetbundle@1.0.0)
+    com.unity.modules.audio@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.audio@1.0.0)
+    com.unity.modules.cloth@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.cloth@1.0.0)
+    com.unity.modules.director@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.director@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.imageconversion@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.imgui@1.0.0)
+    com.unity.modules.infinity@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.infinity@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.particlesystem@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.physics@1.0.0)
+    com.unity.modules.physics2d@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.physics2d@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.terrain@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.terrain@1.0.0)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0)
+    com.unity.modules.tilemap@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.tilemap@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.ui@1.0.0)
+    com.unity.modules.uielements@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.uielements@1.0.0)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0)
+    com.unity.modules.vehicles@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.vehicles@1.0.0)
+    com.unity.modules.video@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.video@1.0.0)
+    com.unity.modules.vr@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.vr@1.0.0)
+    com.unity.modules.wind@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.wind@1.0.0)
+    com.unity.modules.xr@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.xr@1.0.0)
+    com.unity.2d.tilemap@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.2d.tilemap@1.0.0)
+    com.unity.2d.sprite@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.2d.sprite@1.0.0)
+    com.unity.modules.subsystems@1.0.0 (location: D:\game\LoveQiE-without2DToolkit\Library\PackageCache\com.unity.modules.subsystems@1.0.0)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.00 seconds
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.61t14 (3a70663b70e0)
+[Subsystems] Discovering subsystems at path C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/game/LoveQiE-without2DToolkit/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Arc(TM) A770 Graphics (ID=0x56a0)
+    Vendor:   Intel
+    VRAM:     16258 MB
+    Driver:   32.0.101.8974
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakXg==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.cluster","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140394
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakXiQemmSJK+BnyCMb"} at 1790140394
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140394, endTime: 1790140394)
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = 'C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=0.0.0.0:56428
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+Begin MonoManager ReloadAssembly
+Registering precompiled tuanjie dll's ...
+Register platform support module: C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008677 seconds.
+- Loaded All Assemblies, in  0.241 seconds
+Native extension for WindowsStandalone target not found
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakXg==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.wechat","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140394
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.wechat","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakXiQemmSJK+BnyCMb"} at 1790140395
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140394, endTime: 1790140394)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakXw==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.douyin","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140395
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.douyin","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakXyQemmSJK9STKyDa"} at 1790140395
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140395, endTime: 1790140395)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakXw==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.kuaishou","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140395
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.kuaishou","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakXyQemmSJK9STKyDa"} at 1790140395
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140395, endTime: 1790140395)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakXw==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.minigame.subplatform.minihost","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140395
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.minigame.subplatform.minihost","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakXyQemmSJK9STKyDa"} at 1790140395
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140395, endTime: 1790140395)
+[Licensing::Client] Successfully resolved entitlement details
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.237 seconds
+Domain Reload Profiling: 475ms
+	BeginReloadAssembly (76ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (91ms)
+		LoadAssemblies (73ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (89ms)
+			TypeCache.Refresh (88ms)
+				TypeCache.ScanAssembly (79ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (237ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (208ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (181ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakXw==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor.legacy.pro","com.unity.editor.watermarks.disable","com.unity.editor.watermarks.prototyping","com.unity.editor.watermarks.edu","com.unity.editor.watermarks.trial","com.unity.editor.time-limited-license","com.unity.editor.cluster","com.unity.editor.unity.compliant","com.unity.editor.watermarks.forcedisable","com.unity.editor.open-harmony.analytics.disabled","com.unity.editor.mini-game.analytics.disabled","com.unity.editor.unity.expiration.2d","com.unity.editor.unity.expiration.7d","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140395
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.unity.expiration.2d","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.watermarks.forcedisable","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.unity.compliant","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.mini-game.analytics.disabled","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.time-limited-license","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakXyQemmSJK9STKyDa"} at 1790140395
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140395, endTime: 1790140395)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s814ms
+[125/128    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[126/128    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+[127/128    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+*** Tundra build success (0.79 seconds), 3 items updated, 128 evaluated
+AssetDatabase: script compilation time: 1.129581s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.161 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Start importing Assets/Editor/NativeTilemapMigration/NativeTilemapMigration.cs using Guid(dee8ddf75280bd647bab5a33f92419ff) Importer(Primary)  -> (artifact id: 'c5931de93339cd325a7669256746d498') in 0.012998 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.206 seconds
+Domain Reload Profiling: 365ms
+	BeginReloadAssembly (101ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (14ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (18ms)
+	LoadAllAssembliesAndSetupDomain (12ms)
+		LoadAssemblies (62ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (9ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (206ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (139ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (26ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8bab96b030ba3544ca252380d850c1ba): Total: 1.683 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=118 ms
+		Asset DB Callback time: managed=31 ms, native=3 ms
+		Scripting: domain reloads=1, domain reload time=387 ms, compile time=1131 ms, other=9 ms
+		Project Asset Count: scripts=265, non-scripts=498
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+		OnDemandAssets Count:0
+	InvokeBeforeRefreshCallbacks: 1.440ms
+	ApplyChangesToAssetFolders: 0.034ms
+	Scan: 21.814ms
+	OnSourceAssetsModified: 1.891ms
+	GetAllGuidsForCategorization: 0.087ms
+	CategorizeAssets: 5.074ms
+	ImportOutOfDateAssets: 224.329ms (-924.003ms without children)
+		ImportManagerImport: 16.538ms (3.321ms without children)
+			ImportInProcess: 13.199ms
+			UpdateCategorizedAssets: 0.018ms
+		CompileScripts: 1130.777ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 0.512ms
+		ReloadImportedAssets: 0.295ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.086ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.123ms
+	PostProcessAllAssets: 31.458ms
+	Hotreload: 0.326ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.001ms
+	UnloadStreamsBegin: 0.211ms
+	PersistCurrentRevisions: 0.073ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 0.320ms
+	Untracked: 1396.615ms
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler TuanjieShaderCompiler.exe after 0.03 seconds
+Scanning for USB devices : 0.711ms
+Initializing Tuanjie extensions:
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Enep5TlVn1rwzg==","messageType":"ProductNameRequest","Value":"unity.DefaultCompany.2DTOOLKIT"} at 1790140397
+[Licensing::Client] Successfully receive message: {"responseCode":200,"messageType":"ProductNameResponse"} at 1790140397
+[Licensing::Client] Error: ProductNameResponse could not be deserialized
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-LoveQiE
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (470.5 KB). Loaded Objects now: 679.
+Memory consumption went from 82.9 MB to 82.4 MB.
+Total: 1.947400 ms (FindLiveObjects: 0.033000 ms CreateObjectMapping: 0.006400 ms MarkObjects: 1.721100 ms  DeleteObjects: 0.186400 ms)
+
+NATIVE_TILEMAP_VALIDATION_PASS 10797
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeTilemapMigration:Validate () (at Assets/Editor/NativeTilemapMigration/NativeTilemapMigration.cs:193)
+NativeTilemapMigration:BuildPlayer (bool) (at Assets/Editor/NativeTilemapMigration/NativeTilemapMigration.cs:208)
+NativeTilemapMigration:BuildRelease () (at Assets/Editor/NativeTilemapMigration/NativeTilemapMigration.cs:203)
+
+(Filename: Assets/Editor/NativeTilemapMigration/NativeTilemapMigration.cs Line: 193)
+
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakUg==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140398
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakUiQemmSJK1cYwmJN"} at 1790140398
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140398, endTime: 1790140398)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully send message: {"AuthorizationCheck":"Yq4zMVFaQlakUg==","messageType":"EntitlementDetailsRequest","entitlementIds":["com.unity.editor","com.unity.editor.headless"],"packageEntitlementIds":[],"includeCustomData":false} at 1790140398
+[Licensing::Client] Successfully receive message: {"entitlementGroups":[{"entitlementGroupId":"F4-9MP9-ZWAG-QSVY-CHDF-P4PP","entitlementGroupIdHash":"25af702a0ffcfe3cb60897b1e699a94eb8956553","productName":"Unity Personal","productType":"TuanjieEditor","licenseType":"ULF","expiration":1790575993000,"matchedEntitlements":[{"entitlementId":"com.unity.editor","isPackage":false,"count":1},{"entitlementId":"com.unity.editor.headless","isPackage":false,"count":1}]}],"responseCode":200,"responseStatus":"Found 1 entitlement groups and 0 free entitlements matching requested entitlement ids","messageType":"EntitlementDetailsResponse","authorizationCheck":"Yq4zMVFaQlakUiQemmSJK1cYwmJN"} at 1790140398
+[Licensing::Client] Attempt to check time stamp (startTime: 1790140398, endTime: 1790140398)
+[Licensing::Client] Successfully resolved entitlement details
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aESkipCompile.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+ExitCode: 0 Duration: 0s65ms
+*** Tundra build success (0.04 seconds), 0 items updated, 3 evaluated
+Asset Pipeline Refresh (id=75eb02997478df840b8512c6feae74fe): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[ScriptCompilation] Requested script compilation because: Recompiling scripts for player build.
+BuildPlayer: start building target 19
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aP.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+ExitCode: 4 Duration: 0s22ms
+[             ] Require frontend run.  Library/Bee/1900b0aP.dag couldn't be loaded
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\Tools\netcorerun\netcorerun.exe "C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aP.dag.json" "Library/Bee/1900b0aP-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+ExitCode: 0 Duration: 0s162ms
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aP.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aP.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+ExitCode: 0 Duration: 0s432ms
+Finished compiling graph: 80 nodes, 231 flattened edges (227 ToBuild, 2 ToUse), maximum node priority 14
+[69/79      0s] WriteText Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp.rsp2
+[70/79      0s] WriteText Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp.UnityAdditionalFile.txt
+[71/79      0s] WriteText Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp.rsp
+[72/79      0s] WriteText Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp.dll.mvfrm.rsp
+[73/79      0s] MovedFromExtractorCombine Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp.dll.mvfrm
+[74/79      0s] Csc Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp.dll (+2 others)
+[75/79      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll
+[76/79      0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb
+[78/79      0s] BuildPlayerDataGenerator Library/BuildPlayerData/Player/RuntimeInitializeOnLoads.json (+1 other)
+*** Tundra build success (0.41 seconds), 9 items updated, 79 evaluated
+Not rebuilding Data files -- no changes
+Asset Pipeline Refresh (id=dfeaa20ad02f9e54ba5872c277943049): Total: 0.004 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+
+
+Mono dependencies included in the build
+Dependency assembly - System.IO.Compression.FileSystem.dll
+Dependency assembly - mscorlib.dll
+Dependency assembly - System.Security.dll
+Dependency assembly - System.Configuration.dll
+Dependency assembly - System.EnterpriseServices.dll
+Dependency assembly - System.ComponentModel.Composition.dll
+Dependency assembly - System.Net.Http.dll
+Dependency assembly - System.Data.DataSetExtensions.dll
+Dependency assembly - Assembly-CSharp.dll
+Dependency assembly - System.Drawing.dll
+Dependency assembly - System.dll
+Dependency assembly - System.Data.dll
+Dependency assembly - System.Xml.Linq.dll
+Dependency assembly - System.Numerics.dll
+Dependency assembly - System.Xml.dll
+Dependency assembly - netstandard.dll
+Dependency assembly - System.Transactions.dll
+Dependency assembly - System.Core.dll
+Dependency assembly - Mono.Security.dll
+Dependency assembly - System.Runtime.Serialization.dll
+Dependency assembly - System.ServiceModel.Internals.dll
+Dependency assembly - System.IO.Compression.dll
+
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --dagfile="Library/Bee/Playerbb0ad439.dag" --profile="Library/Bee/backend1.traceevents" Player
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\Tools\netcorerun\netcorerun.exe "C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\WinPlayerBuildProgram.exe" "C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Bee;C:/Program Files/Tuanjie/Hub/Editor/2022.3.61t14/Editor/Data/Tools/BuildPipeline" "Library/Bee/Playerbb0ad439.dag.json" "Library/Bee/Playerbb0ad439-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+ExitCode: 4 Duration: 0s33ms
+DisplayProgressbar: Incremental Player Build
+ExitCode: 0 Duration: 0s168ms
+Starting: C:\Program Files\Tuanjie\Hub\Editor\2022.3.61t14\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --dagfile="Library/Bee/Playerbb0ad439.dag" --dagfilejson="Library\Bee\Playerbb0ad439.dag.json" --profile="Library/Bee/backend2.traceevents" Player
+WorkingDir: D:/game/LoveQiE-without2DToolkit
+ExitCode: 0 Duration: 0s156ms
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+
+-------------------------------------------------------------------------------
+Build Report
+Information on used Assets is not available, since player data was not rebuilt.
+Do a clean build to view the Asset build report information.
+-------------------------------------------------------------------------------
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1082 unused Assets / (1.1 MB). Loaded Objects now: 695.
+Memory consumption went from 87.8 MB to 86.7 MB.
+Total: 2.523100 ms (FindLiveObjects: 0.065300 ms CreateObjectMapping: 0.018000 ms MarkObjects: 1.778900 ms  DeleteObjects: 0.660300 ms)
+
+DisplayProgressNotification: Build Successful
+Build Finished, Result: Success.
+##utp:{"type":"PlayerBuildInfo","version":2,"phase":"Immediate","time":1790140400902,"processId":20428,"steps":[{"description":"Preprocess Player","duration":5},{"description":"Prepare For Build","duration":23},{"description":"ProducePlayerScriptAssemblies","duration":987},{"description":"Verify Build setup","duration":80},{"description":"Prepare assets for target platform","duration":6},{"description":"Prepare splash screen","duration":0},{"description":"Run script only build","duration":755},{"description":"Postprocess built player","duration":532}],"duration":2388}
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.494 ms
+	Integration:            2.454 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       0.036 ms
+	Total Operation Time:   2.989 ms
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 695.
+Memory consumption went from 82.6 MB to 82.6 MB.
+Total: 1.982200 ms (FindLiveObjects: 0.035500 ms CreateObjectMapping: 0.006200 ms MarkObjects: 1.934500 ms  DeleteObjects: 0.005400 ms)
+
+Batchmode quit successfully invoked - shutting down!
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] License Notification channel disconnected successfully.
+[Licensing::IpcConnector] License Client channel disconnected successfully.
+Shutting down server...
+Cleanup mono
+[Performance] WinEditorMain                                                                                                   :        1 samples, Peak.  5.53 s (1.0x), Avg.  5.53 s, Total. 5.533 s (41.9%)
+[Performance] WinEditorMain.ConfigureCrashHandler                                                                             :        1 samples, Peak.  18.1 us (1.0x), Avg.  18.1 us, Total. 18.10 us (0.0%)
+[Performance] WinEditorMain.CurlRequestInitialize                                                                             :        1 samples, Peak.   590 us (1.0x), Avg.   590 us, Total. 590.3 us (0.0%)
+[Performance] WinEditorMain.SetupLogFile                                                                                      :        1 samples, Peak.   668 us (1.0x), Avg.   668 us, Total. 668.2 us (0.0%)
+[Performance] WinEditorMain.RunNativeTestsIfRequiredAndExit                                                                   :        1 samples, Peak.   100 ns (1.0x), Avg.   100 ns, Total. 100.0 ns (0.0%)
+[Performance] WinEditorMain.Licensing                                                                                         :        1 samples, Peak.  5.49 s (1.0x), Avg.  5.49 s, Total. 5.493 s (41.6%)
+[Performance] WinEditorMain.InitializeCrashHandler                                                                            :        1 samples, Peak.  36.7 ms (1.0x), Avg.  36.7 ms, Total. 36.68 ms (0.3%)
+[Performance] WinEditorMain.CreateApplication                                                                                 :        1 samples, Peak.   104 us (1.0x), Avg.   104 us, Total. 103.7 us (0.0%)
+[Performance] Application.InitializeProject                                                                                   :        1 samples, Peak.  3.73 s (1.0x), Avg.  3.73 s, Total. 3.734 s (28.3%)
+[Performance] Application.PackageManager.StartServer                                                                          :        1 samples, Peak.  14.0 ms (1.0x), Avg.  14.0 ms, Total. 14.02 ms (0.1%)
+[Performance] Application.AcquireProjectLock                                                                                  :        1 samples, Peak.  3.74 ms (1.0x), Avg.  3.74 ms, Total. 3.739 ms (0.0%)
+[Performance] Application.InitializeEngineNoGraphics                                                                          :        1 samples, Peak.   324 ms (1.0x), Avg.   324 ms, Total. 324.3 ms (2.5%)
+[Performance] Application.PackageManager.Initialize                                                                           :        1 samples, Peak.  85.3 us (1.0x), Avg.  85.3 us, Total. 85.30 us (0.0%)
+[Performance] Connecting to Package Manager                                                                                   :        1 samples, Peak.  39.0 us (1.0x), Avg.  39.0 us, Total. 39.00 us (0.0%)
+[Performance] PackageManager::Api::RunRequestSynchronously                                                                    :        7 samples, Peak.  5.40 us (2.0x), Avg.  2.71 us, Total. 19.00 us (0.0%)
+[Performance] Application.EngineGraphics.Initialize                                                                           :        1 samples, Peak.   218 ms (1.0x), Avg.   218 ms, Total. 217.6 ms (1.6%)
+[Performance] Application.GI.Initialize                                                                                       :        1 samples, Peak.  3.08 ms (1.0x), Avg.  3.08 ms, Total. 3.076 ms (0.0%)
+[Performance] Application.LoadAllDefaultResourcesFromEditor                                                                   :        1 samples, Peak.  1.42 ms (1.0x), Avg.  1.42 ms, Total. 1.415 ms (0.0%)
+[Performance] Application.LoadMonoAssemblies                                                                                  :        1 samples, Peak.   492 ms (1.0x), Avg.   492 ms, Total. 492.3 ms (3.7%)
+[Performance] RestoreManagedReferences                                                                                        :        2 samples, Peak.  26.4 ms (2.0x), Avg.  13.2 ms, Total. 26.37 ms (0.2%)
+[Performance] InitializeOnLoad SceneSearch                                                                                    :        2 samples, Peak.   195 us (1.0x), Avg.   190 us, Total. 380.1 us (0.0%)
+[Performance] InitializeOnLoad DrivenRectTransformUndo                                                                        :        2 samples, Peak.   144 us (1.0x), Avg.   139 us, Total. 277.8 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebugger                                                                                :        2 samples, Peak.   434 us (1.2x), Avg.   377 us, Total. 754.5 us (0.0%)
+[Performance] InitializeOnLoad EditMode                                                                                       :        2 samples, Peak.   312 us (1.0x), Avg.   308 us, Total. 617.0 us (0.0%)
+[Performance] InitializeOnLoad ProjectSearch                                                                                  :        2 samples, Peak.   211 us (1.7x), Avg.   121 us, Total. 242.7 us (0.0%)
+[Performance] InitializeOnLoad ManagedDebuggerWindow                                                                          :        2 samples, Peak.  80.6 us (1.1x), Avg.  75.8 us, Total. 151.5 us (0.0%)
+[Performance] InitializeOnLoad ConsoleEntrance                                                                                :        2 samples, Peak.   196 us (1.0x), Avg.   194 us, Total. 387.7 us (0.0%)
+[Performance] InitializeOnLoad TuanjiePathAndNameFix                                                                          :        2 samples, Peak.   497 us (1.1x), Avg.   458 us, Total. 916.1 us (0.0%)
+[Performance] InitializeOnLoad AddComponentWindow                                                                             :        2 samples, Peak.  86.3 us (1.2x), Avg.  74.3 us, Total. 148.7 us (0.0%)
+[Performance] InitializeOnLoad MixerEffectDefinitionReloader                                                                  :        2 samples, Peak.  1.42 ms (1.1x), Avg.  1.23 ms, Total. 2.464 ms (0.0%)
+[Performance] InitializeOnLoad NativeFormatImporterUtility                                                                    :        2 samples, Peak.  1.84 ms (1.2x), Avg.  1.52 ms, Total. 3.046 ms (0.0%)
+[Performance] InitializeOnLoad UnityConnect                                                                                   :        2 samples, Peak.  35.6 us (1.1x), Avg.  33.4 us, Total. 66.90 us (0.0%)
+[Performance] InitializeOnLoad AssetStoreContext                                                                              :        2 samples, Peak.  17.1 ms (1.0x), Avg.  16.5 ms, Total. 33.06 ms (0.3%)
+[Performance] InitializeOnLoad UISystemProfilerRenderService                                                                  :        2 samples, Peak.  22.8 us (1.5x), Avg.  14.9 us, Total. 29.90 us (0.0%)
+[Performance] InitializeOnLoad ShortcutIntegration                                                                            :        2 samples, Peak.  71.1 us (1.2x), Avg.  58.4 us, Total. 116.8 us (0.0%)
+[Performance] InitializeOnLoad CacheServerWindow                                                                              :        2 samples, Peak.  14.2 us (1.4x), Avg.  9.80 us, Total. 19.60 us (0.0%)
+[Performance] InitializeOnLoad PrefabInstanceChangedListener                                                                  :        2 samples, Peak.   102 us (1.1x), Avg.  93.6 us, Total. 187.3 us (0.0%)
+[Performance] InitializeOnLoad CloudBuild                                                                                     :        2 samples, Peak.  3.10 us (1.2x), Avg.  2.65 us, Total. 5.300 us (0.0%)
+[Performance] InitializeOnLoad ProfilerConnectionPopupWindow                                                                  :        2 samples, Peak.  15.6 us (1.0x), Avg.  15.1 us, Total. 30.10 us (0.0%)
+[Performance] InitializeOnLoad SettingsService                                                                                :        2 samples, Peak.  8.00 us (1.4x), Avg.  5.85 us, Total. 11.70 us (0.0%)
+[Performance] InitializeOnLoad ObjectSelectorSearch                                                                           :        2 samples, Peak.  32.1 us (1.2x), Avg.  27.4 us, Total. 54.80 us (0.0%)
+[Performance] InitializeOnLoad PlayModeDownload                                                                               :        2 samples, Peak.  3.58 ms (1.9x), Avg.  1.86 ms, Total. 3.724 ms (0.0%)
+[Performance] InitializeOnLoad SearchService                                                                                  :        2 samples, Peak.  73.5 us (1.0x), Avg.  71.0 us, Total. 142.1 us (0.0%)
+[Performance] InitializeOnLoad PoolManager                                                                                    :        2 samples, Peak.  31.8 us (1.1x), Avg.  30.0 us, Total. 60.00 us (0.0%)
+[Performance] InitializeOnLoad WindowLayout                                                                                   :        2 samples, Peak.   325 us (1.0x), Avg.   311 us, Total. 622.3 us (0.0%)
+[Performance] InitializeOnLoad BuildProfileHelperManager                                                                      :        2 samples, Peak.  94.2 ms (1.9x), Avg.  49.2 ms, Total. 98.33 ms (0.7%)
+[Performance] InitializeOnLoad MenuItems                                                                                      :        2 samples, Peak.   148 us (1.5x), Avg.  99.6 us, Total. 199.1 us (0.0%)
+[Performance] InitializeOnLoad EditorMonitor                                                                                  :        2 samples, Peak.   431 us (1.1x), Avg.   386 us, Total. 772.0 us (0.0%)
+[Performance] InitializeOnLoad RetainedMode                                                                                   :        2 samples, Peak.  1.56 ms (1.1x), Avg.  1.48 ms, Total. 2.962 ms (0.0%)
+[Performance] InitializeOnLoad EditorShaderLoader                                                                             :        2 samples, Peak.   424 us (1.0x), Avg.   422 us, Total. 844.1 us (0.0%)
+[Performance] InitializeOnLoad EditorDelegateRegistration                                                                     :        2 samples, Peak.   318 us (1.1x), Avg.   286 us, Total. 571.5 us (0.0%)
+[Performance] InitializeOnLoad UIDocumentHierarchyWatcher                                                                     :        2 samples, Peak.  67.1 us (1.2x), Avg.  56.3 us, Total. 112.7 us (0.0%)
+[Performance] InitializeOnLoad LiveReloadTrackerCreator                                                                       :        2 samples, Peak.   116 us (1.2x), Avg.  97.6 us, Total. 195.1 us (0.0%)
+[Performance] InitializeOnLoad UxmlObjectEditorFactories                                                                      :        2 samples, Peak.   427 us (1.2x), Avg.   350 us, Total. 699.0 us (0.0%)
+[Performance] InitializeOnLoad UXMLEditorFactories                                                                            :        2 samples, Peak.  36.5 ms (1.0x), Avg.  35.1 ms, Total. 70.11 ms (0.5%)
+[Performance] InitializeOnLoad PurchasingService                                                                              :        2 samples, Peak.  4.60 ms (1.0x), Avg.  4.52 ms, Total. 9.042 ms (0.1%)
+[Performance] InitializeOnLoad CloudBuildPoller                                                                               :        2 samples, Peak.  73.8 us (1.1x), Avg.  67.9 us, Total. 135.9 us (0.0%)
+[Performance] InitializeOnLoad EditorGameServicesAnalytics                                                                    :        2 samples, Peak.  1.94 ms (1.5x), Avg.  1.30 ms, Total. 2.593 ms (0.0%)
+[Performance] InitializeOnLoad AnalyticsService                                                                               :        2 samples, Peak.   114 us (1.0x), Avg.   111 us, Total. 221.7 us (0.0%)
+[Performance] InitializeOnLoad BuildService                                                                                   :        2 samples, Peak.  81.9 us (1.0x), Avg.  81.5 us, Total. 163.0 us (0.0%)
+[Performance] InitializeOnLoad AdsService                                                                                     :        2 samples, Peak.   238 us (1.0x), Avg.   235 us, Total. 469.1 us (0.0%)
+[Performance] InitializeOnLoad UDPService                                                                                     :        2 samples, Peak.  91.8 us (1.0x), Avg.  88.9 us, Total. 177.8 us (0.0%)
+[Performance] InitializeOnLoad CrashService                                                                                   :        2 samples, Peak.  76.0 us (1.0x), Avg.  75.5 us, Total. 151.0 us (0.0%)
+[Performance] InitializeOnLoad ServicesRepository                                                                             :        2 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 600.0 ns (0.0%)
+[Performance] InitializeOnLoad SearchWindow                                                                                   :        2 samples, Peak.  85.5 us (1.1x), Avg.  74.8 us, Total. 149.7 us (0.0%)
+[Performance] InitializeOnLoad CustomIndexers                                                                                 :        2 samples, Peak.  11.6 ms (1.1x), Avg.  11.0 ms, Total. 22.00 ms (0.2%)
+[Performance] InitializeOnLoad SearchMonitor                                                                                  :        2 samples, Peak.   680 us (1.1x), Avg.   596 us, Total. 1.193 ms (0.0%)
+[Performance] InitializeOnLoad ParameterControllerEditor                                                                      :        2 samples, Peak.  13.0 us (1.1x), Avg.  11.6 us, Total. 23.30 us (0.0%)
+[Performance] InitializeOnLoad LayerSettingsWindow                                                                            :        2 samples, Peak.  13.3 us (1.7x), Avg.  7.85 us, Total. 15.70 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerHookGUIDConverter.RegisterPackagesEventHandler                                   :        2 samples, Peak.   488 us (1.7x), Avg.   291 us, Total. 582.3 us (0.0%)
+[Performance] InitializeOnLoad EditorDragAndDrop.RegisterEditorClient                                                         :        2 samples, Peak.   142 us (1.1x), Avg.   130 us, Total. 259.0 us (0.0%)
+[Performance] InitializeOnLoad EditorEventCallbacks.InitializeFontAssetResourceChangeCallBacks                                :        2 samples, Peak.   711 us (1.0x), Avg.   683 us, Total. 1.365 ms (0.0%)
+[Performance] InitializeOnLoad SceneTemplateService.Init                                                                      :        2 samples, Peak.   718 us (1.1x), Avg.   675 us, Total. 1.349 ms (0.0%)
+[Performance] InitializeOnLoad DiagnosticSwitchesConsoleMessage.Init                                                          :        2 samples, Peak.  4.64 ms (1.7x), Avg.  2.69 ms, Total. 5.388 ms (0.0%)
+[Performance] InitializeOnLoad EditorWindow.Initialize                                                                        :        2 samples, Peak.   155 us (1.0x), Avg.   148 us, Total. 295.5 us (0.0%)
+[Performance] InitializeOnLoad MemoryProfilerCompilationGuard.InjectCompileGuard                                              :        2 samples, Peak.  91.0 us (1.0x), Avg.  90.9 us, Total. 181.8 us (0.0%)
+[Performance] InitializeOnLoad PackageManagerWindow.EditorInitializedInSafeMode                                               :        2 samples, Peak.   130 us (1.7x), Avg.  74.8 us, Total. 149.7 us (0.0%)
+[Performance] InitializeOnLoad ToolShortcutContext.Init                                                                       :        2 samples, Peak.  78.5 us (1.0x), Avg.  77.1 us, Total. 154.1 us (0.0%)
+[Performance] InitializeOnLoad AssetPostprocessingInternal.RefreshCustomDependencies                                          :        2 samples, Peak.  1.90 ms (1.4x), Avg.  1.34 ms, Total. 2.690 ms (0.0%)
+[Performance] InitializeOnLoad SysrootManager.Initialize                                                                      :        2 samples, Peak.   306 us (1.0x), Avg.   298 us, Total. 595.2 us (0.0%)
+[Performance] InitializeOnLoad ScopedRegistryAddedPopup.SubscribeToRegistriesAdded                                            :        2 samples, Peak.   128 us (1.3x), Avg.  95.9 us, Total. 191.9 us (0.0%)
+[Performance] InitializeOnLoad SceneVisibilityManager.Initialize                                                              :        2 samples, Peak.  3.10 ms (1.7x), Avg.  1.80 ms, Total. 3.593 ms (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.PackageManager.TuanjiePathAndNameFix.FixTuanjieNameOrPath :        2 samples, Peak.  2.60 ms (1.1x), Avg.  2.37 ms, Total. 4.735 ms (0.0%)
+[Performance] AssemblyReloadEvents.afterAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.AfterAssemblyReload    :        2 samples, Peak.  2.59 ms (1.9x), Avg.  1.39 ms, Total. 2.770 ms (0.0%)
+[Performance] ProcessService.EditorAfterLoadAllAssemblies                                                                     :        2 samples, Peak.   214 us (1.1x), Avg.   189 us, Total. 377.2 us (0.0%)
+[Performance] Application.ReadLicenseInfo                                                                                     :        1 samples, Peak.  23.2 ms (1.0x), Avg.  23.2 ms, Total. 23.15 ms (0.2%)
+[Performance] Application.InitialRefresh                                                                                      :        1 samples, Peak.  1.68 s (1.0x), Avg.  1.68 s, Total. 1.684 s (12.7%)
+[Performance] ShaderImporter.SourceAssetModified                                                                              :        2 samples, Peak.   600 ns (1.2x), Avg.   500 ns, Total. 1.000 us (0.0%)
+[Performance] ShaderIncludeImporter.SourceAssetModified                                                                       :        2 samples, Peak.   800 ns (1.3x), Avg.   600 ns, Total. 1.200 us (0.0%)
+[Performance] Compiling Scripts                                                                                               :        1 samples, Peak.  1.13 s (1.0x), Avg.  1.13 s, Total. 1.130 s (8.5%)
+[Performance] AssemblyReloadEvents.beforeAssemblyReload: UnityEditor.SceneTemplate.SceneTemplateService.BeforeAssemblyReload  :        1 samples, Peak.   327 us (1.0x), Avg.   327 us, Total. 327.0 us (0.0%)
+[Performance] PresetManagerPostProcessor.OnPreprocessAsset                                                                    :        1 samples, Peak.   809 us (1.0x), Avg.   809 us, Total. 808.5 us (0.0%)
+[Performance] CancelSplashScreenOnAssetChange.OnPreprocessAsset                                                               :        1 samples, Peak.  81.7 us (1.0x), Avg.  81.7 us, Total. 81.70 us (0.0%)
+[Performance] InitializeOnLoad SpriteEditorWindow                                                                             :        1 samples, Peak.   277 us (1.0x), Avg.   277 us, Total. 277.3 us (0.0%)
+[Performance] InitializeOnLoad SceneViewGridManager.Initialize                                                                :        1 samples, Peak.  4.78 ms (1.0x), Avg.  4.78 ms, Total. 4.780 ms (0.0%)
+[Performance] InitializeOnLoad TilemapPrefabStageHelper.Initialize                                                            :        1 samples, Peak.  1.00 ms (1.0x), Avg.  1.00 ms, Total. 1.004 ms (0.0%)
+[Performance] InitializeOnLoad SceneViewOpenTilePaletteHelper.Initialize                                                      :        1 samples, Peak.   670 us (1.0x), Avg.   670 us, Total. 669.7 us (0.0%)
+[Performance] InitializeOnLoad TileDragAndDropManager.Initialize                                                              :        1 samples, Peak.   450 us (1.0x), Avg.   450 us, Total. 450.4 us (0.0%)
+[Performance] DidReloadScriptsAdvancedDropdownWindow.OnScriptReload                                                           :        1 samples, Peak.   132 us (1.0x), Avg.   132 us, Total. 131.8 us (0.0%)
+[Performance] AssetDatabase.ImportAssets                                                                                      :        5 samples, Peak.  1.00 us (2.6x), Avg.   380 ns, Total. 1.900 us (0.0%)
+[Performance] VersionControl.Task.Wait                                                                                        :        1 samples, Peak.  4.60 us (1.0x), Avg.  4.60 us, Total. 4.600 us (0.0%)
+[Performance] BuilderAssetPostprocessor.OnPostprocessAllAssets                                                                :        2 samples, Peak.  1.95 ms (1.0x), Avg.  1.90 ms, Total. 3.808 ms (0.0%)
+[Performance] ArtifactBrowserPostProcessor.OnPostprocessAllAssets                                                             :        2 samples, Peak.   322 us (1.0x), Avg.   321 us, Total. 641.8 us (0.0%)
+[Performance] AssetEvents.OnPostprocessAllAssets                                                                              :        4 samples, Peak.   123 us (1.6x), Avg.  78.3 us, Total. 313.0 us (0.0%)
+[Performance] AudioMixerPostprocessor.OnPostprocessAllAssets                                                                  :        2 samples, Peak.   175 us (1.0x), Avg.   175 us, Total. 349.6 us (0.0%)
+[Performance] DomainReloadPostprocessor.OnPostprocessAllAssets                                                                :        2 samples, Peak.  1.26 ms (1.0x), Avg.  1.25 ms, Total. 2.505 ms (0.0%)
+[Performance] StyleCatalogPostProcessor.OnPostprocessAllAssets                                                                :        2 samples, Peak.  11.9 ms (1.0x), Avg.  11.9 ms, Total. 23.75 ms (0.2%)
+[Performance] BuildCatalog                                                                                                    :        1 samples, Peak.  11.2 ms (1.0x), Avg.  11.2 ms, Total. 11.15 ms (0.1%)
+[Performance] ModelImporterPostProcessor.OnPostprocessAllAssets                                                               :        2 samples, Peak.   715 us (1.0x), Avg.   714 us, Total. 1.428 ms (0.0%)
+[Performance] RetainedModeAssetPostprocessor.OnPostprocessAllAssets                                                           :        2 samples, Peak.  2.28 ms (1.0x), Avg.  2.27 ms, Total. 4.549 ms (0.0%)
+[Performance] AssetChangedListener.OnPostprocessAllAssets                                                                     :        2 samples, Peak.  1.20 ms (1.0x), Avg.  1.20 ms, Total. 2.391 ms (0.0%)
+[Performance] SpeedTreePostProcessor.OnPostprocessAllAssets                                                                   :        2 samples, Peak.   142 us (1.0x), Avg.   141 us, Total. 282.2 us (0.0%)
+[Performance] TextAssetPostProcessor.OnPostprocessAllAssets                                                                   :        2 samples, Peak.   334 us (1.0x), Avg.   333 us, Total. 666.7 us (0.0%)
+[Performance] AssetProcessor.OnPostprocessAllAssets                                                                           :        6 samples, Peak.   581 us (1.4x), Avg.   415 us, Total. 2.489 ms (0.0%)
+[Performance] SpriteEditorTexturePostprocessor.OnPostprocessAllAssets                                                         :        2 samples, Peak.   203 us (1.0x), Avg.   202 us, Total. 403.3 us (0.0%)
+[Performance] SyncVS.PostprocessSyncProject                                                                                   :        1 samples, Peak.  1.19 ms (1.0x), Avg.  1.19 ms, Total. 1.188 ms (0.0%)
+[Performance] Application.ImportPackagesAndSetTemplateWhenCreatingProject                                                     :        1 samples, Peak.  10.7 ms (1.0x), Avg.  10.7 ms, Total. 10.67 ms (0.1%)
+[Performance] Application.SyncCurrentColorSpace                                                                               :        1 samples, Peak.  76.4 ms (1.0x), Avg.  76.4 ms, Total. 76.42 ms (0.6%)
+[Performance] Application.OnUsbDevicesChanged                                                                                 :        1 samples, Peak.   748 us (1.0x), Avg.   748 us, Total. 748.2 us (0.0%)
+[Performance] Application.AssetInstanceCacheUpdate                                                                            :        1 samples, Peak.   100 ns (1.0x), Avg.   100 ns, Total. 100.0 ns (0.0%)
+[Performance] Application.UnityExtensions.Initialize                                                                          :        1 samples, Peak.   340 us (1.0x), Avg.   340 us, Total. 339.8 us (0.0%)
+[Performance] CodeEditorProjectSync.SyncEditorProject                                                                         :        1 samples, Peak.  83.4 us (1.0x), Avg.  83.4 us, Total. 83.40 us (0.0%)
+[Performance] Application.ExecuteStartups                                                                                     :        1 samples, Peak.  37.8 ms (1.0x), Avg.  37.8 ms, Total. 37.80 ms (0.3%)
+[Performance] Menu.RegisterMenuInterface                                                                                      :       26 samples, Peak.   800 ns (6.1x), Avg.   131 ns, Total. 3.400 us (0.0%)
+[Performance] Gizmo.RebuildRenderers                                                                                          :        2 samples, Peak.  37.0 ms (1.5x), Avg.  24.6 ms, Total. 49.14 ms (0.4%)
+[Performance] Gizmo.AddGizmoRenderers                                                                                         :       46 samples, Peak.  1.41 ms (32.5x), Avg.  43.3 us, Total. 1.990 ms (0.0%)
+[Performance] Application.editorInitializingProject                                                                           :        1 samples, Peak.   150 ms (1.0x), Avg.   150 ms, Total. 150.0 ms (1.1%)
+[Performance] Application.InitializeMenu                                                                                      :        1 samples, Peak.  44.1 ms (1.0x), Avg.  44.1 ms, Total. 44.15 ms (0.3%)
+[Performance] Menu.RebuildAll                                                                                                 :        1 samples, Peak.  44.1 ms (1.0x), Avg.  44.1 ms, Total. 44.14 ms (0.3%)
+[Performance] Menu.BuildRegisteredMenuInterfaces                                                                              :        1 samples, Peak.  42.5 ms (1.0x), Avg.  42.5 ms, Total. 42.50 ms (0.3%)
+[Performance] Menu.FilterMenuItem                                                                                             :      501 samples, Peak.  12.1 ms (495.6x), Avg.  24.4 us, Total. 12.23 ms (0.1%)
+[Performance] UpdateAllMenus                                                                                                  :        1 samples, Peak.   402 us (1.0x), Avg.   402 us, Total. 401.6 us (0.0%)
+[Performance] Menu.RebuildOSMainMenu                                                                                          :        3 samples, Peak.  1.16 ms (1.1x), Avg.  1.06 ms, Total. 3.181 ms (0.0%)
+[Performance] EditorSceneManager.sceneClosing: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnSceneClosing            :        2 samples, Peak.   193 us (2.0x), Avg.  98.6 us, Total. 197.3 us (0.0%)
+[Performance] GUIView.RepaintAll.PlayerLoopController                                                                         :        2 samples, Peak.  1.40 us (1.1x), Avg.  1.25 us, Total. 2.500 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneTemplate.SceneTemplateService.OnNewSceneCreated            :        1 samples, Peak.   268 us (1.0x), Avg.   268 us, Total. 267.8 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneVisibilityManager.EditorSceneManagerOnNewSceneCreated      :        1 samples, Peak.   125 us (1.0x), Avg.   125 us, Total. 125.3 us (0.0%)
+[Performance] EditorSceneManager.newSceneCreated: UnityEditor.SceneManagement.StageNavigationManager.OnNewSceneCreated        :        1 samples, Peak.  35.4 us (1.0x), Avg.  35.4 us, Total. 35.40 us (0.0%)
+[Performance] Application.InvokeFinishedLoadingProject                                                                        :        1 samples, Peak.  1.22 ms (1.0x), Avg.  1.22 ms, Total. 1.220 ms (0.0%)
+[Performance] ProcessService.OnProjectLoaded                                                                                  :        1 samples, Peak.  25.4 us (1.0x), Avg.  25.4 us, Total. 25.40 us (0.0%)
+[Performance] Inspector.InitOrRebuild                                                                                         :        2 samples, Peak.   221 us (1.4x), Avg.   155 us, Total. 310.2 us (0.0%)
+[Performance] PaletteAssetModificationProcessor.OnWillSaveAssets                                                              :        2 samples, Peak.   178 us (1.9x), Avg.  92.9 us, Total. 185.8 us (0.0%)
+[Performance] BuilderAssetModificationProcessor.OnWillSaveAssets                                                              :        2 samples, Peak.   237 us (2.0x), Avg.   119 us, Total. 238.4 us (0.0%)
+[Performance] TerrainModificationProcessor.OnWillSaveAssets                                                                   :        2 samples, Peak.   518 us (2.0x), Avg.   260 us, Total. 519.3 us (0.0%)
+[Performance] GenerateAssemblyTypeInfos                                                                                       :        2 samples, Peak.  3.71 ms (1.2x), Avg.  3.07 ms, Total. 6.146 ms (0.0%)
+[Performance] AssetDatabase.Refresh                                                                                           :        1 samples, Peak.  4.25 ms (1.0x), Avg.  4.25 ms, Total. 4.252 ms (0.0%)
+[Performance] EditorApplication.quitting: UnityEditor.Tilemaps.SceneViewGridManager.EditorQuitting                            :        1 samples, Peak.  63.2 us (1.0x), Avg.  63.2 us, Total. 63.20 us (0.0%)
+[Performance] EditorApplication.quitting: callback in UnityEditor.TextCore.Text.EditorEventCallbacks                          :        1 samples, Peak.  2.24 ms (1.0x), Avg.  2.24 ms, Total. 2.237 ms (0.0%)
+[Performance] Application.Shutdown.PauseProfilerSession                                                                       :        1 samples, Peak.  36.3 us (1.0x), Avg.  36.3 us, Total. 36.30 us (0.0%)
+[Performance] Application.Shutdown.PauseAssetImportWorkers                                                                    :        1 samples, Peak.  77.0 us (1.0x), Avg.  77.0 us, Total. 77.00 us (0.0%)
+[Performance] Application.Shutdown.SaveAssets                                                                                 :        1 samples, Peak.  1.98 ms (1.0x), Avg.  1.98 ms, Total. 1.978 ms (0.0%)
+[Performance] Application.Shutdown.CleanupRenderPipeline                                                                      :        1 samples, Peak.  4.40 us (1.0x), Avg.  4.40 us, Total. 4.400 us (0.0%)
+[Performance] Application.Shutdown.StopPreloadManager                                                                         :        1 samples, Peak.  9.99 ms (1.0x), Avg.  9.99 ms, Total. 9.993 ms (0.1%)
+[Performance] Application.Shutdown.DestroyWorld                                                                               :        1 samples, Peak.   203 us (1.0x), Avg.   203 us, Total. 203.4 us (0.0%)
+[Performance] Application.Shutdown.CleanupAfterLoad                                                                           :        1 samples, Peak.  1.57 ms (1.0x), Avg.  1.57 ms, Total. 1.573 ms (0.0%)
+[Performance] Application.Shutdown.Progress                                                                                   :        1 samples, Peak.  5.70 us (1.0x), Avg.  5.70 us, Total. 5.700 us (0.0%)
+[Performance] Application.Shutdown.GICleanupManagers                                                                          :        1 samples, Peak.   339 us (1.0x), Avg.   339 us, Total. 339.5 us (0.0%)
+[Performance] Application.Shutdown.MenuCleanupClass                                                                           :        1 samples, Peak.  94.8 us (1.0x), Avg.  94.8 us, Total. 94.80 us (0.0%)
+[Performance] Application.Shutdown.ADBSaveStateBeforeShutdown                                                                 :        1 samples, Peak.  5.70 us (1.0x), Avg.  5.70 us, Total. 5.700 us (0.0%)
+[Performance] Application.Shutdown.RemoteShutdown                                                                             :        1 samples, Peak.  1.50 us (1.0x), Avg.  1.50 us, Total. 1.500 us (0.0%)
+[Performance] Application.Shutdown.CleanupVCProvider                                                                          :        1 samples, Peak.  7.50 us (1.0x), Avg.  7.50 us, Total. 7.500 us (0.0%)
+[Performance] Application.Shutdown.InputShutdown                                                                              :        1 samples, Peak.   400 ns (1.0x), Avg.   400 ns, Total. 400.0 ns (0.0%)
+[Performance] Application.Shutdown.GizmoManagerDestroy                                                                        :        1 samples, Peak.   647 us (1.0x), Avg.   647 us, Total. 647.4 us (0.0%)
+[Performance] Application.Shutdown.ProfilerSession                                                                            :        1 samples, Peak.   159 us (1.0x), Avg.   159 us, Total. 158.6 us (0.0%)
+[Performance] Application.Shutdown.ReleaseGfxWindowOnAllGUIViews                                                              :        1 samples, Peak.   300 ns (1.0x), Avg.   300 ns, Total. 300.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupEngine                                                                              :        1 samples, Peak.  44.9 ms (1.0x), Avg.  44.9 ms, Total. 44.87 ms (0.3%)
+[Performance] Application.Shutdown.CleanupAssetDatabase                                                                       :        1 samples, Peak.  2.80 ms (1.0x), Avg.  2.80 ms, Total. 2.804 ms (0.0%)
+[Performance] Application.Shutdown.ScriptCompilationCleanUp                                                                   :        1 samples, Peak.  11.0 ms (1.0x), Avg.  11.0 ms, Total. 11.01 ms (0.1%)
+[Performance] Application.Shutdown.DestroyJobSystem                                                                           :        1 samples, Peak.  93.1 us (1.0x), Avg.  93.1 us, Total. 93.10 us (0.0%)
+[Performance] Application.Shutdown.CleanupPersistentManager                                                                   :        1 samples, Peak.   217 us (1.0x), Avg.   217 us, Total. 217.2 us (0.0%)
+[Performance] Application.Shutdown.CleanupAsyncReadManager                                                                    :        1 samples, Peak.   279 us (1.0x), Avg.   279 us, Total. 279.2 us (0.0%)
+[Performance] Application.Shutdown.CleanupProgressBar                                                                         :        1 samples, Peak.   200 ns (1.0x), Avg.   200 ns, Total. 200.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupMono                                                                                :        1 samples, Peak.  28.7 ms (1.0x), Avg.  28.7 ms, Total. 28.67 ms (0.2%)
+[Performance] Application.Shutdown.CleanupStdConverters                                                                       :        1 samples, Peak.  6.10 us (1.0x), Avg.  6.10 us, Total. 6.100 us (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportModuleNativeDlls                                                   :        1 samples, Peak.   500 ns (1.0x), Avg.   500 ns, Total. 500.0 ns (0.0%)
+[Performance] Application.Shutdown.UnloadAllPlatformSupportNativeLibraries                                                    :        1 samples, Peak.   100 ns (1.0x), Avg.   100 ns, Total. 100.0 ns (0.0%)
+[Performance] Application.Shutdown.CleanupAutoDocumentation                                                                   :        1 samples, Peak.   255 us (1.0x), Avg.   255 us, Total. 254.6 us (0.0%)
+[Performance] Application.Shutdown.ShaderNameManagerDestroy                                                                   :        1 samples, Peak.  39.0 us (1.0x), Avg.  39.0 us, Total. 39.00 us (0.0%)
+[Performance] Application.Shutdown.CleanupCacheServer                                                                         :        1 samples, Peak.   100 ns (1.0x), Avg.   100 ns, Total. 100.0 ns (0.0%)
+[Performance] Application.Shutdown.Virtualization_Shutdown                                                                    :        1 samples, Peak.   400 ns (1.0x), Avg.   400 ns, Total. 400.0 ns (0.0%)
+[Performance] Application.Shutdown.DevConnections                                                                             :        1 samples, Peak.   173 us (1.0x), Avg.   173 us, Total. 173.3 us (0.0%)
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

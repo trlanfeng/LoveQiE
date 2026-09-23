@@ -1,0 +1,1 @@
+PASS: 99/99 original levels have a solution; mirrored movement; original occupancy; all spawn cells clear.

@@ -1,145 +1,99 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using Rotorz.Tile;
-using DG.Tweening;
+using UnityEngine;
 
-public enum GameState
-{
-    Init,
-    Ready,
-    Play,
-    Win,
-    Faild
-}
-
+public enum GameState { Init, Ready, Play, Win, Faild, Complete }
 public class GameManager : MonoBehaviour
 {
     public static TileManager TM;
-    public static TileSystem tileSystem;
-
+    public static NativeLevel CurrentLevel { get; private set; }
     public GameObject charactorLeft;
     public GameObject charactorRight;
-    private int curScene;
-    private int maxScene;
-
     public GameState gameState;
-    void Start()
+    public int CurrentScene { get; private set; }
+    public const int MaxScene = 99;
+    private GameObject sceneInstance;
+    private CharactorManager left;
+    private CharactorManager right;
+    private float winTimer;
+    private void Start()
     {
-        maxScene = 99;
-        curScene = 1;
-        gameState = GameState.Init;
-    }
-    void Update()
-    {
-        switch (gameState)
+        TM = GetComponent<TileManager>();
+        if (charactorLeft == null || charactorRight == null)
         {
-            case GameState.Init:
-                onInit();
-                break;
-            case GameState.Ready:
-                onReady();
-                break;
-            case GameState.Play:
-                onPlay();
-                break;
-            case GameState.Win:
-                onWin();
-                break;
-            case GameState.Faild:
-                onFaild();
-                break;
+            Debug.LogError("Player references are missing from the main scene.");
+            gameState = GameState.Faild; return;
         }
+        left = charactorLeft.GetComponent<CharactorManager>();
+        right = charactorRight.GetComponent<CharactorManager>();
+        left.GM = right.GM = this;
+        left.TM = right.TM = TM;
+        LoadLevel(1);
     }
-    GameObject curSceneGameObject;
-    void onInit()
+    public bool LoadLevel(int number)
     {
-        initCharactorPosition();
-        loadScene();
-        tileSystem = curSceneGameObject.GetComponent<TileSystem>();
-        if (tileSystem != null)
+        if (number < 1 || number > MaxScene || left == null || right == null) return false;
+        GameObject prefab = Resources.Load<GameObject>("Maps/Scenes/Scene " + number);
+        if (prefab == null || prefab.GetComponent<NativeLevel>() == null)
         {
-            winTimer = 0;
-            gameState = GameState.Ready;
+            Debug.LogError("Native Tilemap level could not be loaded: " + number);
+            gameState = GameState.Faild; return false;
         }
-        else
-        {
-            Debug.LogError("关卡加载失败！");
-        }
+        if (sceneInstance != null) { sceneInstance.SetActive(false); Destroy(sceneInstance); }
+        sceneInstance = Instantiate(prefab);
+        // Normalize editor-only offsets so every level aligns with the persistent floor.
+        sceneInstance.transform.position = new Vector3(0, 0, 1);
+        CurrentLevel = sceneInstance.GetComponent<NativeLevel>();
+        CurrentScene = number;
+        left.ResetAt(CurrentLevel.CellCenter(7, 10));
+        right.ResetAt(CurrentLevel.CellCenter(9, 10));
+        winTimer = 0; gameState = GameState.Play; return true;
     }
-    void initCharactorPosition()
+    private void Update()
     {
-        charactorRight.transform.position = new Vector3(9.5f, -10.5f, 0);
-        charactorLeft.transform.position = new Vector3(7.5f, -10.5f, 0);
-    }
-    void loadScene()
-    {
-        tileSystem = null;
-        GameObject temp = curSceneGameObject;
-        curSceneGameObject = Instantiate(Resources.Load<GameObject>("Maps/Scenes/Scene " + curScene.ToString()));
-        if (temp != null)
+        if (Input.GetKeyDown(KeyCode.R)) { LoadLevel(CurrentScene > 0 ? CurrentScene : 1); return; }
+        if (gameState == GameState.Win)
         {
-            Destroy(temp);
-        }
-    }
-    void onReady()
-    {
-        if (tileSystem == null)
-        {
-            gameState = GameState.Init;
-        }
-        gameState = GameState.Play;
-    }
-    void onPlay()
-    {
-        if (tileSystem == null)
-        {
-            gameState = GameState.Init;
-        }
-        TileIndex tiRight = tileSystem.ClosestTileIndexFromWorld(charactorRight.transform.position);
-        if (tiRight.row == 1 && tiRight.column == 7)
-        {
-            TileIndex tiLeft = tileSystem.ClosestTileIndexFromWorld(charactorLeft.transform.position);
-            if (tiLeft.row == 1 && tiLeft.column == 9)
+            winTimer += Time.deltaTime;
+            if (winTimer >= 1f)
             {
-                gameState = GameState.Win;
+                if (CurrentScene < MaxScene) LoadLevel(CurrentScene + 1);
+                else gameState = GameState.Complete;
             }
+            return;
         }
-        else if (tiRight.row == 1 && tiRight.column == 9)
+        if (gameState != GameState.Play || CurrentLevel == null || left.IsMoving || right.IsMoving) return;
+        if (ArePlayersAtGoal()) { gameState = GameState.Win; winTimer = 0; return; }
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) TryMove(Vector2Int.up);
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) TryMove(Vector2Int.down);
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) TryMove(Vector2Int.left);
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) TryMove(Vector2Int.right);
+    }
+    public bool TryMove(Vector2Int direction)
+    {
+        if (gameState != GameState.Play || left == null || right == null || left.IsMoving || right.IsMoving) return false;
+        if (Mathf.Abs(direction.x) + Mathf.Abs(direction.y) != 1) return false;
+        bool movedLeft = left.TryMove(direction);
+        bool movedRight = right.TryMove(direction);
+        return movedLeft || movedRight;
+    }
+    public bool ArePlayersAtGoal()
+    {
+        if (CurrentLevel == null || left == null || right == null) return false;
+        Vector2Int a = CurrentLevel.WorldToIndex(left.transform.position);
+        Vector2Int b = CurrentLevel.WorldToIndex(right.transform.position);
+        return a.y == 1 && b.y == 1 && ((a.x == 7 && b.x == 9) || (a.x == 9 && b.x == 7));
+    }
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(12, 8, 500, 24), "LEVEL " + CurrentScene + " / 99    WASD / Arrows: Move    R: Restart");
+        if (gameState == GameState.Complete)
         {
-            TileIndex tiLeft = tileSystem.ClosestTileIndexFromWorld(charactorLeft.transform.position);
-            if (tiLeft.row == 1 && tiLeft.column == 7)
-            {
-                gameState = GameState.Win;
-            }
+            GUI.Box(new Rect(Screen.width / 2 - 140, Screen.height / 2 - 45, 280, 90), "All 99 levels completed!");
+            if (GUI.Button(new Rect(Screen.width / 2 - 60, Screen.height / 2, 120, 30), "Play again")) LoadLevel(1);
         }
     }
-    void checkResult()
+    private void OnDestroy()
     {
-
-    }
-    float winTimer = 0;
-    void onWin()
-    {
-        if (winTimer == 0)
-        {
-            charactorRight.transform.DOMoveX(7.5f, 0.3f);
-            charactorLeft.transform.DOMoveX(9.5f, 0.3f);
-        }
-        winTimer += Time.deltaTime;
-        Debug.Log("赢了");
-        if (winTimer > 1)
-        {
-            if (curScene < maxScene)
-            {
-                curScene += 1;
-                gameState = GameState.Init;
-                return;
-            }
-        }
-    }
-    void onFaild()
-    {
-
+        if (sceneInstance != null) Destroy(sceneInstance);
+        CurrentLevel = null; TM = null;
     }
 }

@@ -1,0 +1,598 @@
+{
+  "levels": [
+    {
+      "number": 1,
+      "solvable": true,
+      "steps": "DDDDDDWWAAWWDDWWWASAAWAWWAAWAA",
+      "states": 1615
+    },
+    {
+      "number": 2,
+      "solvable": true,
+      "steps": "DDWWAAWWDDDDWWDDWWWWWAAAAAA",
+      "states": 2546
+    },
+    {
+      "number": 3,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 4,
+      "solvable": true,
+      "steps": "WWWWDDWSASSSDDWWWWDDWWWWWAASSSAAWWWDDAA",
+      "states": 2658
+    },
+    {
+      "number": 5,
+      "solvable": true,
+      "steps": "WWDDSSAADDWWWWAAWWDDWWWAA",
+      "states": 2135
+    },
+    {
+      "number": 6,
+      "solvable": true,
+      "steps": "WWDDSWWDDWWAAWWWWAAW",
+      "states": 2220
+    },
+    {
+      "number": 7,
+      "solvable": true,
+      "steps": "WWDDWWDDWWDDSSSSSSDDWWWAAWWWDDWWWAAAAAA",
+      "states": 2632
+    },
+    {
+      "number": 8,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 9,
+      "solvable": true,
+      "steps": "DDWWAAWWDDWWAAWWW",
+      "states": 879
+    },
+    {
+      "number": 10,
+      "solvable": true,
+      "steps": "DDWWDDWWAAWWAAWWW",
+      "states": 1581
+    },
+    {
+      "number": 11,
+      "solvable": true,
+      "steps": "DDWWDDWWWWAASWWWAAW",
+      "states": 1992
+    },
+    {
+      "number": 12,
+      "solvable": true,
+      "steps": "WWDSDDDWWAAWWDDDDWWWAAAAAAW",
+      "states": 2386
+    },
+    {
+      "number": 13,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 14,
+      "solvable": true,
+      "steps": "WDDWDDWWAAWWDDWWWAASAAWWW",
+      "states": 2182
+    },
+    {
+      "number": 15,
+      "solvable": true,
+      "steps": "WWWWWWDDSSSSDDWWWWWWAASAAWWW",
+      "states": 1946
+    },
+    {
+      "number": 16,
+      "solvable": true,
+      "steps": "WWWWDDWWDDDDWWAAWWDDWWAAWWWAAAA",
+      "states": 2189
+    },
+    {
+      "number": 17,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 18,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 19,
+      "solvable": true,
+      "steps": "DDDDDDWWAAAAAAWWDDDDDDWWAAAAAAWWWWW",
+      "states": 2265
+    },
+    {
+      "number": 20,
+      "solvable": true,
+      "steps": "WWDWWDDSSSSDDWWWWADDWWWWWAASSSAWAWWWWAA",
+      "states": 2362
+    },
+    {
+      "number": 21,
+      "solvable": true,
+      "steps": "WWDDWWAAWWDDWWWAA",
+      "states": 1209
+    },
+    {
+      "number": 22,
+      "solvable": true,
+      "steps": "DDWWDDWWAAWWAAWWW",
+      "states": 1630
+    },
+    {
+      "number": 23,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 24,
+      "solvable": true,
+      "steps": "WWDSDDDDDWWAAWWDDWWWAAAAWSSSAAWWW",
+      "states": 2232
+    },
+    {
+      "number": 25,
+      "solvable": true,
+      "steps": "WWDDWWASAWWDSDWWAAWWW",
+      "states": 1940
+    },
+    {
+      "number": 26,
+      "solvable": true,
+      "steps": "DDWWDDWWAAWWAAWWW",
+      "states": 1545
+    },
+    {
+      "number": 27,
+      "solvable": true,
+      "steps": "DDWWASAWWWWDDWWWAAW",
+      "states": 1475
+    },
+    {
+      "number": 28,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 29,
+      "solvable": true,
+      "steps": "DDWDDWWAAWWDDWWAAAAWWW",
+      "states": 1574
+    },
+    {
+      "number": 30,
+      "solvable": true,
+      "steps": "WWWWDDWWDSSSSADDWWWWWWAAWWWAAWWW",
+      "states": 2379
+    },
+    {
+      "number": 31,
+      "solvable": true,
+      "steps": "WWDDDDWWDDWWAAWWWAASAAW",
+      "states": 2364
+    },
+    {
+      "number": 32,
+      "solvable": true,
+      "steps": "DDWWAAWWDDDDWWDDDDWWWAAAAAA",
+      "states": 1904
+    },
+    {
+      "number": 33,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 34,
+      "solvable": true,
+      "steps": "WWWWDDWWWWWAAWWWWW",
+      "states": 2149
+    },
+    {
+      "number": 35,
+      "solvable": true,
+      "steps": "WWDDSSDDWDDWWWAAAAAAWWDDDDDDWWAAAAWAAWWW",
+      "states": 2298
+    },
+    {
+      "number": 36,
+      "solvable": true,
+      "steps": "WWWWDDSSSSAADDWWWWDDWWWWWAASSSDAWAWWWAA",
+      "states": 2519
+    },
+    {
+      "number": 37,
+      "solvable": true,
+      "steps": "WWDDWWAAWWDDWWWAAWWW",
+      "states": 1750
+    },
+    {
+      "number": 38,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 39,
+      "solvable": true,
+      "steps": "WWWWWWWWWDDSSSSSSDDWWWWWWDDWWWAAAAAA",
+      "states": 2129
+    },
+    {
+      "number": 40,
+      "solvable": true,
+      "steps": "WWWDDDDSDDWWAAWWDDWWWAAAASSSAAWWW",
+      "states": 2470
+    },
+    {
+      "number": 41,
+      "solvable": true,
+      "steps": "DDWWAAWWDDWWWWAAWWW",
+      "states": 1669
+    },
+    {
+      "number": 42,
+      "solvable": true,
+      "steps": "DDWWDDWWAAWWAAWWW",
+      "states": 1072
+    },
+    {
+      "number": 43,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 44,
+      "solvable": true,
+      "steps": "WWDDDDWWAAWWDDDDWWWAAAAAAWWW",
+      "states": 2060
+    },
+    {
+      "number": 45,
+      "solvable": true,
+      "steps": "WWWWDDSSSSADWDWAAWWDDWWWAAAAWWW",
+      "states": 2122
+    },
+    {
+      "number": 46,
+      "solvable": true,
+      "steps": "WWDDWWAAWWDDDDWWWAAWWWAA",
+      "states": 2256
+    },
+    {
+      "number": 47,
+      "solvable": true,
+      "steps": "DDDDDDWWAAWWDDWWAAWDDWWAAWAA",
+      "states": 2525
+    },
+    {
+      "number": 48,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 49,
+      "solvable": true,
+      "steps": "DDWDDDDWWAAWWAAAAWWDDWWWAA",
+      "states": 2426
+    },
+    {
+      "number": 50,
+      "solvable": true,
+      "steps": "WWDDSSDDWWWWAAWWWWWAA",
+      "states": 1236
+    },
+    {
+      "number": 51,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 93
+    },
+    {
+      "number": 52,
+      "solvable": true,
+      "steps": "WWWWDDWWDSSSSADDWWWWDDWWAAWWWAASSSAAWWWAA",
+      "states": 2696
+    },
+    {
+      "number": 53,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 54,
+      "solvable": true,
+      "steps": "WWDDWWAAWWWWW",
+      "states": 514
+    },
+    {
+      "number": 55,
+      "solvable": true,
+      "steps": "WWWWWWDDSSSSSSDDWWDDWWWWDDWWWAAAASAAW",
+      "states": 2492
+    },
+    {
+      "number": 56,
+      "solvable": true,
+      "steps": "WWDDWDDDDWWAAWWDDWWWAAAASSSAAWWW",
+      "states": 2355
+    },
+    {
+      "number": 57,
+      "solvable": true,
+      "steps": "WDDWWAAWWDDWWAAWWW",
+      "states": 1104
+    },
+    {
+      "number": 58,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 59,
+      "solvable": true,
+      "steps": "DDWWDDWWWWAAWWWDDWWAAAAWWW",
+      "states": 2275
+    },
+    {
+      "number": 60,
+      "solvable": true,
+      "steps": "WWWWDDDSSSSDWDWAAWWDDDDWWWAAAAWWAAW",
+      "states": 2375
+    },
+    {
+      "number": 61,
+      "solvable": true,
+      "steps": "WWDDWWAAWWDDWWSDDWWWAAWWAAW",
+      "states": 2571
+    },
+    {
+      "number": 62,
+      "solvable": true,
+      "steps": "DDDDWDDWWAAWWDDWWAAWWWAASAAW",
+      "states": 2546
+    },
+    {
+      "number": 63,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 64,
+      "solvable": true,
+      "steps": "WWWWDDWWDDWDDWWWAAWAAAA",
+      "states": 1943
+    },
+    {
+      "number": 65,
+      "solvable": true,
+      "steps": "WWDDSSDDDDWWAAWWAAAAWWDDWWWAA",
+      "states": 2059
+    },
+    {
+      "number": 66,
+      "solvable": true,
+      "steps": "WWWWDDWWDDWWAAWWWAA",
+      "states": 2125
+    },
+    {
+      "number": 67,
+      "solvable": true,
+      "steps": "DDDDDDWWAAAAAAWWDDDDDDWWAAAAAAWWW",
+      "states": 1993
+    },
+    {
+      "number": 68,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 69,
+      "solvable": true,
+      "steps": "WWDSDWWAAWWDDWWWAAW",
+      "states": 1388
+    },
+    {
+      "number": 70,
+      "solvable": true,
+      "steps": "WWDDWWWWAAWWWWW",
+      "states": 1393
+    },
+    {
+      "number": 71,
+      "solvable": true,
+      "steps": "WWWWWWDDSSSSSSDDWWWWWWDDWWWAASAAWAA",
+      "states": 2309
+    },
+    {
+      "number": 72,
+      "solvable": true,
+      "steps": "WWDSDDDDDWWAAWWDDWWWAAAAWSSSAAWWW",
+      "states": 2366
+    },
+    {
+      "number": 73,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 74,
+      "solvable": true,
+      "steps": "DDWDDWWAAWWDDWWAAAAWWW",
+      "states": 1736
+    },
+    {
+      "number": 75,
+      "solvable": true,
+      "steps": "WWWWDDWWDSSSSADDWWWWAAWWAAWAAWWW",
+      "states": 2229
+    },
+    {
+      "number": 76,
+      "solvable": true,
+      "steps": "WWDDWDDWWAAWWDDDDWWWDDAAAAAA",
+      "states": 2342
+    },
+    {
+      "number": 77,
+      "solvable": true,
+      "steps": "DDWWDDDDWWAAWWDDWWAWAWWAWAAAA",
+      "states": 2518
+    },
+    {
+      "number": 78,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 79,
+      "solvable": true,
+      "steps": "WDDWWWAAWWDDWWWAAWWW",
+      "states": 1803
+    },
+    {
+      "number": 80,
+      "solvable": true,
+      "steps": "WWDWWDSSDWWDWDDDWWWAAWWWWAAWAA",
+      "states": 2213
+    },
+    {
+      "number": 81,
+      "solvable": true,
+      "steps": "DDDDWDDWWAAWWAAAAWWDDWWWAA",
+      "states": 2185
+    },
+    {
+      "number": 82,
+      "solvable": true,
+      "steps": "WDDWWWDDWWWAAWWAAWWW",
+      "states": 2094
+    },
+    {
+      "number": 83,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 84,
+      "solvable": true,
+      "steps": "WWWWDDSSSSDDWWWWDSDWWWWWAASSSAAWWWAAW",
+      "states": 2208
+    },
+    {
+      "number": 85,
+      "solvable": true,
+      "steps": "WWDDWWWWAAWWDWDWWDWAA",
+      "states": 2198
+    },
+    {
+      "number": 86,
+      "solvable": true,
+      "steps": "WWDDWWWWAAWWWWW",
+      "states": 1214
+    },
+    {
+      "number": 87,
+      "solvable": true,
+      "steps": "WWWWWWDDSSSSSSDDWWWWWWDSDWWWAAAAAAW",
+      "states": 2314
+    },
+    {
+      "number": 88,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 89,
+      "solvable": true,
+      "steps": "DDWDDWWAAWWDDWWAAAAWWW",
+      "states": 1476
+    },
+    {
+      "number": 90,
+      "solvable": true,
+      "steps": "WWWWDDWWDSSSSADDWWWWWWAAWWAAWWW",
+      "states": 2108
+    },
+    {
+      "number": 91,
+      "solvable": true,
+      "steps": "WWDDWWAAWWWDWDDDWAWWAAWAA",
+      "states": 2362
+    },
+    {
+      "number": 92,
+      "solvable": true,
+      "steps": "WDDWDDDDWWAAWWDDDWDWAAWWAAWAAAA",
+      "states": 2377
+    },
+    {
+      "number": 93,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 94,
+      "solvable": true,
+      "steps": "WWDDWWAAWWDDWWWAAWWW",
+      "states": 1679
+    },
+    {
+      "number": 95,
+      "solvable": true,
+      "steps": "DDWWWWAAWWDDWWWAA",
+      "states": 2069
+    },
+    {
+      "number": 96,
+      "solvable": true,
+      "steps": "WWWWDDWWDDWWDDWWWAAAAAA",
+      "states": 1738
+    },
+    {
+      "number": 97,
+      "solvable": true,
+      "steps": "DDWDDWDDWWAAWWAAWAAWWDDWWWAA",
+      "states": 2477
+    },
+    {
+      "number": 98,
+      "solvable": true,
+      "steps": "WWWWWWWWW",
+      "states": 39
+    },
+    {
+      "number": 99,
+      "solvable": true,
+      "steps": "DDDDDDWWAAAAAAWWDDDDDDWWAAAAAAWWW",
+      "states": 1631
+    }
+  ]
+}

@@ -1,80 +1,29 @@
-﻿using UnityEngine;
-using Rotorz.Tile;
+using UnityEngine;
+using UnityEngine.Tilemaps;
 
-public enum TileType
-{
-    Solid,
-    Item,
-    Blank,
-    OutSide
-}
-
-public enum TileDirection
-{
-    Up,
-    Down,
-    Left,
-    Right
-}
-
+public enum TileType { Solid, Item, Blank, OutSide }
+public enum TileDirection { Up, Down, Left, Right }
 public class TileManager : MonoBehaviour
 {
-    //private TileIndex baseTileIndex;
-    //private int x;
-    //private int y;
-
-    public TileData getTileData(int x, int y)
+    public TileBase getTileData(int x, int y)
     {
-        if (GameManager.tileSystem == null)
-        {
-            return null;
-        }
-        return GameManager.tileSystem.GetTile(y, x);
+        NativeLevel level = GameManager.CurrentLevel;
+        return level != null && level.Contains(x, y) ? level.obstacles.GetTile(NativeLevel.ToCell(x, y)) : null;
     }
-
-    public TileType getTargetTileData(Vector3 position, TileDirection tileDirection, int dir)
+    public TileType getTargetTileData(Vector3 position, TileDirection direction, int dir)
     {
-        TileIndex ti = GameManager.tileSystem.ClosestTileIndexFromWorld(position);
-        int x = ti.column;
-        int y = ti.row;
-        switch (tileDirection)
+        NativeLevel level = GameManager.CurrentLevel;
+        if (level == null) return TileType.OutSide;
+        Vector2Int index = level.WorldToIndex(position);
+        switch (direction)
         {
-            case TileDirection.Up:
-                y -= 1;
-                break;
-            case TileDirection.Down:
-                y += 1;
-                break;
-            case TileDirection.Left:
-                x -= 1;
-                break;
-            case TileDirection.Right:
-                x += 1;
-                break;
+            case TileDirection.Up: index.y--; break;
+            case TileDirection.Down: index.y++; break;
+            case TileDirection.Left: index.x--; break;
+            case TileDirection.Right: index.x++; break;
         }
-        if (x < 0 || y < 0 || x > GameManager.tileSystem.ColumnCount || y > GameManager.tileSystem.RowCount)
-        {
-            return TileType.OutSide;
-        }
-        else
-        {
-            TileData td = getTileData(x, y);
-            if (td != null)
-            {
-                if (td.Empty)
-                {
-                    return TileType.Blank;
-                }
-                if (td.SolidFlag)
-                {
-                    return TileType.Solid;
-                }
-                return TileType.Solid;
-            }
-            else
-            {
-                return TileType.Blank;
-            }
-        }
+        if (!level.Contains(index.x, index.y)) return TileType.OutSide;
+        // Original gameplay blocked every non-empty tile, regardless of SolidFlag.
+        return level.IsBlocked(index.x, index.y) ? TileType.Solid : TileType.Blank;
     }
 }

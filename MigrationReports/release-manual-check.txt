@@ -1,0 +1,6 @@
+PASS: Release player launched on Windows.
+Visual inspection: wood walls, grass variants, heart and both characters render correctly.
+Keyboard D: left character moved left; right character moved right.
+Keyboard R: both characters restored to original spawn positions.
+Release build: 0 errors, 0 warnings.
+PASS: Tuanjie Editor Play mode boots main scene and shows native Scene 1. Returned to edit mode.

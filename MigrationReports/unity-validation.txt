@@ -1,0 +1,1 @@
+PASS: 100 native prefabs; 20400 cells compared; 10797 occupied cells; sprites, bounds, coordinate roundtrips and no Rotorz dependencies.

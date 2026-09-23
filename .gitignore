@@ -7,3 +7,7 @@
 *.unityproj
 *.sln
 /.vs
+
+# Local builds and editor logs
+[Bb]uilds/
+[Ll]ogs/

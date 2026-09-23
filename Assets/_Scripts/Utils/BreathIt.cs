@@ -1,19 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
-using DG.Tweening;
-
+using UnityEngine;
 public class BreathIt : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
-    {
-        transform.DOScale(1f, 0.5f).SetLoops(100,LoopType.Yoyo).SetEase(Ease.InBack);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    private Vector3 baseScale;
+    private void Awake() { baseScale = transform.localScale; }
+    private void Update() { transform.localScale = baseScale * (1f + 0.06f * Mathf.Sin(Time.time * Mathf.PI * 2)); }
 }
