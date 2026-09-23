@@ -1,0 +1,1 @@
+PASS: only 16 sidewalk slices changed; all 24 road/marking slices unchanged; 128px opaque rounded cuts; corner asphalt matches; 168 connected curb profile comparisons pass; atlas packing and sprite names unchanged.

@@ -7,7 +7,7 @@ Requires Pillow. AI sources/prompts are retained in output/imagegen; no credenti
 import json
 import math
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageOps
+from PIL import Image, ImageDraw, ImageOps, ImageFilter, ImageChops
 from prepare_car_sprites import extract as chroma_extract, make_frames
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,6 +46,67 @@ def pack(name, entries, columns):
     return dict(file=f"{name}.png", sprites=records)
 
 
+def raised_sidewalk(mask, asphalt):
+    """A continuous raised slab. Only road-facing edges are inset/rounded.
+
+    Unexposed sides extend past the tile, so long blocks have no false end caps.
+    Render at 4x for smooth curves; keep road-colored pixels under the round cuts.
+    """
+    scale = 4
+    size = SIZE * scale
+
+    def silhouette(inset=0, dx=0, dy=0):
+        bounds = [5 + inset if mask & 8 else -64,
+                  4 + inset if mask & 1 else -64,
+                  123 - inset if mask & 2 else 192,
+                  120 - inset if mask & 4 else 192]
+        bounds = [(v + (dx if i % 2 == 0 else dy)) * scale for i, v in enumerate(bounds)]
+        shape = Image.new("L", (size, size))
+        ImageDraw.Draw(shape).rounded_rectangle(bounds, radius=max(1, 22 - inset) * scale, fill=255)
+        return shape
+
+    tile = asphalt.resize((size, size), Image.Resampling.BICUBIC)
+    top = silhouette()
+    shadow = silhouette(dx=1, dy=4).filter(ImageFilter.GaussianBlur(2 * scale))
+    tile.paste((22, 30, 34, 255), (0, 0, size, size), shadow.point(lambda a: int(a * 0.48)))
+    # Five-pixel south-facing fascia under the cap gives the sidewalk its height.
+    tile.paste((108, 103, 94, 255), (0, 0, size, size), silhouette(dy=5))
+    tile.paste((155, 148, 133, 255), (0, 0, size, size), silhouette(dy=3))
+    tile.paste((202, 196, 177, 255), (0, 0, size, size), top)
+    light = ImageChops.subtract(top, silhouette(dx=1.2, dy=1.5))
+    tile.paste((247, 237, 215, 255), (0, 0, size, size), light)
+    shade = ImageChops.subtract(top, silhouette(dx=-1, dy=-1))
+    tile.paste((159, 153, 138, 255), (0, 0, size, size), shade)
+
+    # Large warm paving slabs with restrained seams and subtle stone variation.
+    paving = Image.new("RGBA", (size, size), "#c1b9a6")
+    draw = ImageDraw.Draw(paving)
+    for y in range(0, 128, 32):
+        for x in range(-32 if y % 64 else 0, 128, 32):
+            tone = ((x // 32 * 3 + y // 32 * 5) % 5) - 2
+            draw.rectangle((x * scale, y * scale, (x + 32) * scale, (y + 32) * scale),
+                           fill=(193 + tone, 185 + tone, 167 + tone, 255))
+            draw.line((x * scale, y * scale, (x + 32) * scale, y * scale), fill="#a89f8d", width=scale)
+            draw.line((x * scale, y * scale, x * scale, (y + 32) * scale), fill="#ada490", width=scale)
+            draw.line((x * scale + scale, y * scale + scale, (x + 32) * scale - scale, y * scale + scale), fill="#d0c8b5", width=scale)
+    # Thin inner groove, then the paving inset. Both follow the same round corner.
+    tile.paste((158, 150, 132, 255), (0, 0, size, size), silhouette(inset=7))
+    tile.paste(paving, (0, 0), silhouette(inset=8))
+    # Joints between curb stones are confined to the cap; no square lines cut corners.
+    cap = ImageChops.subtract(top, silhouette(inset=7))
+    joints = Image.new("L", (size, size))
+    d = ImageDraw.Draw(joints)
+    for p in (32, 64, 96):
+        if mask & 1: d.line((p * scale, 0, p * scale, 12 * scale), fill=110, width=scale)
+        if mask & 4: d.line((p * scale, 112 * scale, p * scale, size), fill=110, width=scale)
+        if mask & 8: d.line((0, p * scale, 13 * scale, p * scale), fill=110, width=scale)
+        if mask & 2: d.line((115 * scale, p * scale, size, p * scale), fill=110, width=scale)
+    tile.paste((121, 116, 104, 255), (0, 0, size, size), ImageChops.multiply(joints, cap))
+    result = tile.resize((128, 128), Image.Resampling.LANCZOS)
+    assert result.getextrema()[3] == (255, 255)
+    return result
+
+
 def terrain():
     # Sample actual asphalt from the approved AI-painted city, then mirror its
     # boundaries so all four variants share identical edge pixels.
@@ -68,26 +129,7 @@ def terrain():
         assert tile.getextrema()[3] == (255, 255)
         entries.append((f"asphalt_{i:02}", tile))
     for mask in range(16):
-        tile = Image.new("RGBA", (128, 128), "#b7b2a4")
-        draw = ImageDraw.Draw(tile)
-        for y in range(0, 128, 32):
-            draw.line((0, y, 127, y), fill="#a7a293", width=1)
-            for x in range(0 if y % 64 == 0 else 16, 128, 32):
-                draw.line((x, y + 1, x, y + 31), fill="#a7a293", width=1)
-                draw.line((x + 1, y + 1, min(x + 30, 127), y + 1), fill="#c6c1b1", width=1)
-        # Bits N=1 E=2 S=4 W=8 indicate adjacent drivable cells.
-        edge = Image.new("RGBA", (128, 128))
-        d = ImageDraw.Draw(edge)
-        d.rectangle((0, 0, 127, 7), fill="#dad3bf")
-        d.line((0, 0, 127, 0), fill="#746f64", width=1)
-        d.line((0, 2, 127, 2), fill="#eee5d0", width=2)
-        d.line((0, 7, 127, 7), fill="#8e897e", width=1)
-        for x in range(0, 128, 16):
-            d.line((x, 1, x, 6), fill="#b0a996")
-        for bit, angle in [(1, 0), (2, -90), (4, 180), (8, 90)]:
-            if mask & bit:
-                tile.alpha_composite(edge.rotate(angle))
-        entries.append((f"sidewalk_{mask:02}", tile))
+        entries.append((f"sidewalk_{mask:02}", raised_sidewalk(mask, asphalt)))
     for mask in range(16):
         tile = Image.new("RGBA", (128, 128))
         draw = ImageDraw.Draw(tile)
