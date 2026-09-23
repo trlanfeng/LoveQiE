@@ -1,0 +1,1 @@
+PASS: both car prefabs; 8 valid 128x128 sprites; centered pivots; 128 PPU; 4 ordered frames each; parked sprite and mirrored controls.

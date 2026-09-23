@@ -7,6 +7,8 @@ public class CharactorManager : MonoBehaviour
     public TileManager TM;
     public int moveDirection = 1;
     public bool IsMoving { get; private set; }
+    private CarSpriteAnimator carAnimation;
+    private void Awake() { carAnimation = GetComponent<CarSpriteAnimator>(); }
     public bool TryMove(Vector2Int input)
     {
         NativeLevel level = GameManager.CurrentLevel;
@@ -22,6 +24,7 @@ public class CharactorManager : MonoBehaviour
         IsMoving = true;
         Vector3 from = transform.position;
         target.z = from.z;
+        if (carAnimation != null) carAnimation.BeginMove(target - from);
         float elapsed = 0;
         while (elapsed < 0.2f)
         {
@@ -32,10 +35,16 @@ public class CharactorManager : MonoBehaviour
         }
         transform.position = target;
         IsMoving = false;
+        if (carAnimation != null) carAnimation.Stop();
     }
     public void ResetAt(Vector3 position)
     {
         StopAllCoroutines(); IsMoving = false; transform.position = position;
+        if (carAnimation != null) carAnimation.ResetPose();
     }
-    private void OnDisable() { StopAllCoroutines(); IsMoving = false; }
+    private void OnDisable()
+    {
+        StopAllCoroutines(); IsMoving = false;
+        if (carAnimation != null) carAnimation.Stop();
+    }
 }

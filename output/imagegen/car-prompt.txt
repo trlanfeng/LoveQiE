@@ -1,0 +1,6 @@
+Use case: stylized-concept
+Asset type: top-down 2D game car sprite source for a cheerful grid puzzle game.
+Primary request: exactly TWO matching cute compact toy cars, one vivid cherry red and one leaf green, seen from a strict orthographic directly overhead camera. Both face UP with the front bumper at the top. Match the same design and scale, only the body paint color differs.
+Composition: 1024x1024 canvas. Red car centered at (256,512), green car centered at (768,512). Each car occupies about 310 pixels wide and 580 pixels tall with generous empty margins. Entire cars and all four tires visible. Nothing else.
+Style: polished friendly 2D casual mobile game sprite art, rounded chunky silhouettes, clean dark colored outlines, simple soft cel shading, large blue-gray windshield, pale warm headlights at the TOP/front, small red taillights at BOTTOM/rear, four dark tires protruding on the sides. Readable at 48 pixels. No face, no eyes, no characters, no racing number, no text or logo.
+Background: perfectly uniform flat bright magenta #FF00FF for chroma-key extraction. No floor, no scenery, no cast shadow, no background gradient, no checkerboard. Avoid magenta anywhere on the cars. Crisp well-defined edges. Do not draw a sprite sheet or extra cars.

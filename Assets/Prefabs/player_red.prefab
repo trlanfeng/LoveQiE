@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 452232}
   - component: {fileID: 21252232}
   - component: {fileID: 11491938}
+  - component: {fileID: 8766513952078167018}
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: player_red
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 17acf1410fd375741aa1048a67091e7e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 375c820eb19e1d54daf4cab209c85548, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +101,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f84c73cc67ac28241abca04de94130c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   GM: {fileID: 0}
   TM: {fileID: 0}
   moveDirection: -1
+--- !u!114 &8766513952078167018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9cc9a36ff0ca5458ad7f14038ff850, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  driveFrames:
+  - {fileID: 21300000, guid: 375c820eb19e1d54daf4cab209c85548, type: 3}
+  - {fileID: 21300000, guid: 63ba0054b30f08346bfeb84d581a8bb7, type: 3}
+  - {fileID: 21300000, guid: 2773092a630356447a59f3021a5c362a, type: 3}
+  - {fileID: 21300000, guid: f18b663ea450f3b4a9404fc42d423666, type: 3}
+  framesPerSecond: 20

@@ -14,6 +14,7 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
     private static readonly List<string> errors = new List<string>();
     private string reportPath;
     private int passed;
+    private int completedLevels;
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Boot()
     {
@@ -43,6 +44,7 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
         Check(manager != null && GameManager.CurrentLevel != null && manager.CurrentScene == 1, "Main scene boots level 1");
         var left = manager.charactorLeft.GetComponent<CharactorManager>();
         var right = manager.charactorRight.GetComponent<CharactorManager>();
+        yield return CheckCars(manager, left, right);
         Check(left.moveDirection == -1 && right.moveDirection == 1, "Original mirrored controls retained");
         Vector3 leftStart = left.transform.position, rightStart = right.transform.position;
         Check(!manager.TryMove(Vector2Int.down), "Bottom wall must block both players");
@@ -93,6 +95,7 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
             if (solution.number < 99) Check(manager.CurrentScene == solution.number + 1, "Automatic next level " + solution.number);
             else Check(manager.gameState == GameState.Complete, "Final level completes without loading missing Scene 100");
             Debug.Log("NATIVE_SMOKE_LEVEL_PASS " + solution.number);
+            completedLevels++;
         }
         Check(manager.LoadLevel(1), "Can replay after completing all levels");
         Time.timeScale = 1;
@@ -101,10 +104,57 @@ public sealed class NativeGameplaySmoke : MonoBehaviour
         Check(errors.Count == 0, "No runtime exceptions/errors");
         Finish(true);
     }
+    private IEnumerator CheckCars(GameManager manager, CharactorManager left, CharactorManager right)
+    {
+        var red = left.GetComponent<CarSpriteAnimator>();
+        var green = right.GetComponent<CarSpriteAnimator>();
+        Check(red != null && green != null && red.FrameCount == 4 && green.FrameCount == 4, "Both car frame sequences assigned");
+        Check(left.GetComponent<SpriteRenderer>().sprite != right.GetComponent<SpriteRenderer>().sprite, "Cars use separate colored sprites");
+        Check(red.Facing == Vector2.up && green.Facing == Vector2.up && !red.IsPlaying && !green.IsPlaying, "Cars spawn parked facing up");
+        Sprite parked = left.GetComponent<SpriteRenderer>().sprite;
+        Check(!manager.TryMove(Vector2Int.down) && !red.IsPlaying && !green.IsPlaying, "Blocked cars do not animate or turn");
+        Check(manager.TryMove(Vector2Int.right), "Cars start horizontal drive");
+        Check(red.IsPlaying && green.IsPlaying && red.Facing == Vector2.left && green.Facing == Vector2.right, "Both cars face their actual mirrored displacement");
+        Check(Vector3.Dot(left.transform.up, Vector3.left) > 0.99f && Vector3.Dot(right.transform.up, Vector3.right) > 0.99f, "Car artwork rotates with facing");
+        yield return new WaitForSeconds(0.065f);
+        Check(red.FrameIndex > 0 && green.FrameIndex > 0 && left.GetComponent<SpriteRenderer>().sprite != parked, "Driving advances real sprite frames");
+        yield return new WaitForSeconds(0.2f);
+        Check(!red.IsPlaying && !green.IsPlaying && red.FrameIndex == 0 && green.FrameIndex == 0, "Completed moves return to parked frame");
+        Check(red.Facing == Vector2.left && green.Facing == Vector2.right, "Parking preserves heading");
+        Check(manager.TryMove(Vector2Int.left), "Cars drive back");
+        Check(red.Facing == Vector2.right && green.Facing == Vector2.left, "Reverse horizontal input changes both headings");
+        Check(manager.LoadLevel(1), "Restart during animation");
+        Check(!left.IsMoving && !right.IsMoving && !red.IsPlaying && !green.IsPlaying && red.FrameIndex == 0, "Restart cancels movement and animation");
+        Check(red.Facing == Vector2.up && green.Facing == Vector2.up, "Restart restores up facing");
+        // The spawn has a wall above it. Place both cars on a clear vertical pair
+        // so this check measures animation rather than the level's wall layout.
+        NativeLevel level = GameManager.CurrentLevel;
+        bool verticalLaneFound = false;
+        for (int y = 2; y < level.rows - 1 && !verticalLaneFound; y++)
+            for (int x = 1; x < level.columns - 1 && !verticalLaneFound; x++)
+                if (!level.IsBlocked(x, y) && !level.IsBlocked(x, y - 1))
+                {
+                    left.ResetAt(level.CellCenter(x, y));
+                    right.ResetAt(level.CellCenter(x, y));
+                    verticalLaneFound = true;
+                }
+        Check(verticalLaneFound, "Clear vertical animation test lane exists");
+        Check(manager.TryMove(Vector2Int.up), "Cars drive upward");
+        Check(red.Facing == Vector2.up && green.Facing == Vector2.up, "Vertical direction is shared");
+        yield return new WaitForSeconds(0.3f);
+        Check(manager.TryMove(Vector2Int.down), "Cars drive downward");
+        Check(red.Facing == Vector2.down && green.Facing == Vector2.down, "Both car noses face down");
+        left.gameObject.SetActive(false);
+        Check(!left.IsMoving && !red.IsPlaying, "Disabling car stops movement and animation");
+        left.gameObject.SetActive(true);
+        Check(red.FrameIndex == 0 && red.Facing == Vector2.up, "Reenabled car resets its pose");
+        Check(manager.LoadLevel(1), "Restore level before full gameplay regression");
+        yield return null;
+    }
     private void Finish(bool success)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(reportPath));
-        File.WriteAllText(reportPath, (success ? "PASS" : "FAIL") + ": " + passed + " checks; all 99 solutions executed through gameplay; errors=" + errors.Count + "\n" + string.Join("\n", errors));
+        File.WriteAllText(reportPath, (success ? "PASS" : "FAIL") + ": " + passed + " checks; " + completedLevels + "/99 solutions executed through gameplay; errors=" + errors.Count + "\n" + string.Join("\n", errors));
         Debug.Log(success ? "NATIVE_GAMEPLAY_SMOKE_PASS" : "NATIVE_GAMEPLAY_SMOKE_FAIL");
         Application.Quit(success ? 0 : 1);
     }
