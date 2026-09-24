@@ -1,1 +1,1 @@
-PASS: 300 sprites (280 terrain, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.
+PASS: 91 sprites (71 terrain including 47 Blob sidewalks, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.

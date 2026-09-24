@@ -3,10 +3,10 @@ import json
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
-from city_sidewalk_geometry import NEIGHBORS, mask_at, paint_region
+from city_sidewalk_geometry import NEIGHBORS, BLOB_MASKS, normalize_mask, mask_at, paint_region, sidewalk
 
 ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "CityReports/corner-connectivity"
+REPORT = ROOT / "CityReports/blob47"
 
 
 def load_tiles():
@@ -23,7 +23,7 @@ def assemble(tiles, occupied, w, h):
     image = Image.new("RGBA", (w * 128, h * 128))
     for y in range(h):
         for x in range(w):
-            name = f"sidewalk_{mask_at(occupied, x, y):02}" if (x, y) in occupied else "asphalt_00"
+            name = f"sidewalk_{normalize_mask(mask_at(occupied, x, y)):02}" if (x, y) in occupied else "asphalt_00"
             image.paste(tiles[name], (x * 128, y * 128))
     return image
 
@@ -31,10 +31,13 @@ def assemble(tiles, occupied, w, h):
 def main():
     REPORT.mkdir(parents=True, exist_ok=True)
     tiles = load_tiles()
-    assert len(tiles) == 280
+    assert len(tiles) == 71
     for mask in range(256):
-        tile = tiles[f"sidewalk_{mask:02}"]
+        tile = tiles[f"sidewalk_{normalize_mask(mask):02}"]
         assert tile.size == (128, 128) and tile.getextrema()[3] == (255, 255)
+        reference = sidewalk(mask, tiles["asphalt_00"])
+        diff = np.abs(np.asarray(tile).astype(int) - np.asarray(reference).astype(int))
+        assert diff.max() <= 5, ("Normalized state changes visible contour", mask, diff.max())
     assert tiles["sidewalk_00"].tobytes() != tiles["sidewalk_16"].tobytes()
     # Enumerate every 4x3/3x4 neighborhood around two connected occupied cells.
     pairs = set()
@@ -54,7 +57,7 @@ def main():
         # Render a continuous strip across the seam, not two separate tiles.
         bounds = (128, 244, 256, 268) if vertical else (244, 128, 268, 256)
         reference = np.asarray(paint_region(occupied, bounds, tiles["asphalt_00"])).astype(int)
-        ta, tb = tiles[f"sidewalk_{ma:02}"], tiles[f"sidewalk_{mb:02}"]
+        ta, tb = tiles[f"sidewalk_{normalize_mask(ma):02}"], tiles[f"sidewalk_{normalize_mask(mb):02}"]
         joined = np.concatenate((np.asarray(ta)[116:128], np.asarray(tb)[:12]), axis=0) if vertical else np.concatenate((np.asarray(ta)[:, 116:128], np.asarray(tb)[:, :12]), axis=1)
         delta = int(np.max(np.abs(joined.astype(int) - reference)))
         max_delta = max(max_delta, delta)
@@ -79,7 +82,7 @@ def main():
         board.paste(tiled.resize((480, 480), Image.Resampling.LANCZOS), (i % 3 * 480, i // 3 * 510 + 30))
         draw.text((i % 3 * 480 + 12, i // 3 * 510 + 10), label, fill="#35404a")
     board.save(REPORT / "complex-corners.png")
-    text = f"PASS: 256 eight-neighbor variants; {len(pairs)} compatible tile pairs compared against a continuous global contour; maximum channel difference={max_delta}/255; L/T/cross/ring/diagonal/one-cell-neck assemblies checked; 280 terrain slices.\n"
+    text = f"PASS: all 256 neighborhoods map to 47 Blob variants without changing their contour; {len(pairs)} compatible tile pairs compared against a continuous global contour; maximum channel difference={max_delta}/255; L/T/cross/ring/diagonal/one-cell-neck assemblies checked; 71 terrain slices.\n"
     (REPORT / "pixel-validation.txt").write_text(text)
     print(text)
 

@@ -1,0 +1,1 @@
+PASS: plugin Standard coordinates AND actual PNG corner pixels match the reference for all 16 cells in both 32px and 128px versions; transparent background (0,3); full foreground (2,1); 128 legal neighboring pairs; max premultiplied RGBA error 3.00/255.

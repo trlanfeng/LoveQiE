@@ -40,7 +40,7 @@ public sealed class CityLevelVisuals : MonoBehaviour
                 int variant = (x * 7 + y * 11) & 3;
                 if (level.IsBlocked(x, y))
                 {
-                    sidewalks.SetTile(cell, theme.sidewalks[SidewalkMask(level, x, y)]);
+                    sidewalks.SetTile(cell, theme.sidewalk);
                     bool median = x == level.columns / 2 && y > 1 && y < level.rows - 1;
                     bool plantedCorner = (x == 0 || x == level.columns - 1) && y % 3 == 0;
                     if (median || plantedCorner)
@@ -59,6 +59,7 @@ public sealed class CityLevelVisuals : MonoBehaviour
                     if (y == 10 && x == 9) markings.SetTile(cell, theme.greenParking);
                 }
             }
+        sidewalks.RefreshAllTiles();
         // The original Tilemap and collider remain the authoritative movement map.
         var renderer = level.obstacles.GetComponent<TilemapRenderer>();
         if (renderer != null) renderer.enabled = false;

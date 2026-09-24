@@ -1,0 +1,1375 @@
+Mono path[0] = 'D:/unity/LoveQiE/Builds/UIValidation/LoveQiE_Data/Managed'
+Mono config path = 'D:/unity/LoveQiE/Builds/UIValidation/MonoBleedingEdge/etc'
+Found 3 interfaces on host : 0) 192.168.1.2 1) 192.168.115.1 2) 192.168.80.1
+Player connection [29100]  Target information:
+
+Player connection [29100]  * "[IP] 192.168.1.2 [Port] 55000 [Flags] 2 [Guid] 1980404301 [EditorId] 80972067 [Version] 1048832 [Id] WindowsPlayer(2,MY-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] LoveQiE" 
+
+Player connection [29100]  * "[IP] 192.168.115.1 [Port] 55000 [Flags] 2 [Guid] 1980404301 [EditorId] 80972067 [Version] 1048832 [Id] WindowsPlayer(2,MY-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] LoveQiE" 
+
+Player connection [29100]  * "[IP] 192.168.80.1 [Port] 55000 [Flags] 2 [Guid] 1980404301 [EditorId] 80972067 [Version] 1048832 [Id] WindowsPlayer(2,MY-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] LoveQiE" 
+
+Player connection [29100] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+AS: AutoStreaming module initializing.
+Initialize engine version: 2022.3.61t14 (3a70663b70e0)
+[Subsystems] Discovering subsystems at path D:/unity/LoveQiE/Builds/UIValidation/LoveQiE_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Arc(TM) A770 Graphics (ID=0x56a0)
+    Vendor:   Intel
+    VRAM:     16258 MB
+    Driver:   32.0.101.8974
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.091 seconds
+- Finished resetting the current domain, in  0.001 seconds
+UnloadTime: 0.413500 ms
+NATIVE_SMOKE_LEVEL_PASS 1
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 2
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 3
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 4
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 5
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 6
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 7
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 8
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 9
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 10
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 11
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 12
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 13
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 14
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 15
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 16
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 17
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 18
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 19
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 20
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 21
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 22
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 23
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 24
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 25
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 26
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 27
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 28
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 29
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 30
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 31
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 32
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 33
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 34
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 35
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 36
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 37
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 38
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 39
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 40
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 41
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 42
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 43
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 44
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 45
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 46
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 47
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 48
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 49
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 50
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 51
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 52
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 53
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 54
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 55
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 56
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 57
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 58
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 59
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 60
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 61
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 62
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 63
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 64
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 65
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 66
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 67
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 68
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 69
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 70
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 71
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 72
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 73
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 74
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 75
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 76
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 77
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 78
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 79
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 80
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 81
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 82
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 83
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 84
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 85
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 86
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 87
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 88
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 89
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 90
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 91
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 92
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 93
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 94
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 95
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 96
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 97
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 98
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_SMOKE_LEVEL_PASS 99
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 166)
+
+NATIVE_GAMEPLAY_SMOKE_PASS
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/b/o/dev/tj/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+NativeGameplaySmoke:Finish (bool) (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:297)
+NativeGameplaySmoke/<Start>d__11:MoveNext () (at D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs:174)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/b/o/dev/tj/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: D:/unity/LoveQiE/Assets/_Scripts/Maps/NativeGameplaySmoke.cs Line: 297)
+
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+PlayerConnection::CleanupMemory Statistics:
+[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators : 
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [4.0 KB-8.0 KB]: 403026 frames, [16.0 KB-32.0 KB]: 1 frames, [128.0 KB-256.0 KB]: 1 frames, [256.0 KB-0.5 MB]: 7 frames, [0.5 MB-1.0 MB]: 1 frames, [1.0 MB-2.0 MB]: 1 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 4.0 MB
+      Peak Allocated Bytes 1.5 MB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 18]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 8]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 4]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 11]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 3]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_BatchDeleteObjects]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 21]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 13]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 2]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 22]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 10]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 15]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 12]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 20.4 KB
+      Overflow Count 2
+    [ALLOC_TEMP_Profiler.Dispatcher]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 456 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 17]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 3]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 14]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 5]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 13]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 2]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 192 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 11]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 0]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 5]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 6]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 9]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 9]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.AsyncRead]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 243 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 10]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 16]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 6]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 1]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 20]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 15]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 7]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 8]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 1]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 199 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 12]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 23
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 138 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_AUDIO_Audio Mixer Thread]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 4]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 14]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 7]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 19]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+[ALLOC_MEMORYPROFILER]
+  Peak usage frame count: [4.0 KB-8.0 KB]: 152657 frames, [32.0 KB-64.0 KB]: 250380 frames
+  Requested Block Size 1.0 MB
+  Peak Block count 1
+  Peak Allocated memory 55.3 KB
+  Peak Large allocation bytes 0 B
+[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 709
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.6 MB
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 110464 frames, [32.0 MB-64.0 MB]: 292573 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 2
+      Peak Allocated memory 33.7 MB
+      Peak Large allocation bytes 16.0 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [4.0 MB-8.0 MB]: 403037 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 4.8 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_TEMP_JOB_1_FRAME]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_2_FRAMES]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_ASYNC (Background)]
+  Initial Block Size 1.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_GFX] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.6 MB
+    [ALLOC_GFX_MAIN]
+      Peak usage frame count: [1.0 MB-2.0 MB]: 1 frames, [2.0 MB-4.0 MB]: 403018 frames, [4.0 MB-8.0 MB]: 6 frames, [8.0 MB-16.0 MB]: 12 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 8.5 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_GFX_THREAD]
+      Peak usage frame count: [1.0 KB-2.0 KB]: 1 frames, [2.0 KB-4.0 KB]: 2 frames, [16.0 KB-32.0 KB]: 394667 frames, [64.0 KB-128.0 KB]: 8367 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 73.0 KB
+      Peak Large allocation bytes 0 B
+[ALLOC_CACHEOBJECTS] Dual Thread Allocator
+  Peak main deferred allocation count 2
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.6 MB
+    [ALLOC_CACHEOBJECTS_MAIN]
+      Peak usage frame count: [1.0 MB-2.0 MB]: 304206 frames, [2.0 MB-4.0 MB]: 98831 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 1
+      Peak Allocated memory 2.1 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_CACHEOBJECTS_THREAD]
+      Peak usage frame count: [32.0 KB-64.0 KB]: 403036 frames, [64.0 KB-128.0 KB]: 1 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 1
+      Peak Allocated memory 116.2 KB
+      Peak Large allocation bytes 0 B
+[ALLOC_TYPETREE] Dual Thread Allocator
+  Peak main deferred allocation count 0
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 1.6 MB
+    [ALLOC_TYPETREE_MAIN]
+      Peak usage frame count: [8.0 KB-16.0 KB]: 403037 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 13.6 KB
+      Peak Large allocation bytes 0 B
+    [ALLOC_TYPETREE_THREAD]
+      Peak usage frame count: [0-1.0 KB]: 403037 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 0
+      Peak Allocated memory 0 B
+      Peak Large allocation bytes 0 B
+[ALLOC_PROFILER]
+  Peak usage frame count: [0.5 MB-1.0 MB]: 403036 frames, [32.0 MB-64.0 MB]: 1 frames
+  Requested Block Size 16.0 MB
+  Peak Block count 3
+  Peak Allocated memory 33.3 MB
+  Peak Large allocation bytes 0 B
+    [ALLOC_PROFILER_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 66.2 KB
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790243091261,"processId":23632,"allocatedMemory":332350,"memoryLabels":[{"Default":40},{"NewDelete":772},{"Manager":15869},{"VertexData":288},{"GfxDevice":312},{"Audio":272141},{"FMODOther":3088},{"Serialization":548},{"JobScheduler":33400},{"String":124},{"DynamicArray":1344},{"HashMap":2304},{"PoolAlloc":112},{"VR":1784},{"Subsystems":96},{"CoreBusinessMetrics":128}]}

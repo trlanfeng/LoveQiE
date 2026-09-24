@@ -1,0 +1,13 @@
+2026-09-24 / LoveQiE game UI
+Engine: Tuanjie 1.6.13 / 2022.3.61t14
+Windows x64 Development: Succeeded; errors=0; warnings=0
+Windows x64 Release: Succeeded; errors=0; warnings=0
+Final 1020x768 runtime: PASS; 59328 checks; 99/99 solutions; errors=0
+1280x800 runtime: PASS; 59328 checks; 99/99 solutions; errors=0
+Verified: home -> level selection -> actual gameplay -> star result -> explicit next level.
+Verified: all 9 selection pages, rating boundaries at 30/60 seconds, three real completion ratings,
+pause timer and movement, restart reset, best score persistence, level 99 return, movement regression.
+Visual QA: rendered home, selection, HUD, pause, each star result, final completion.
+UI screenshots use actual UI Toolkit panel rendering composited with the actual game camera.
+UI actions use NavigationSubmitEvent on real Button elements; not manual mouse testing.
+Automation does not alter player scores for levels 1-99.

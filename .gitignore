@@ -13,3 +13,7 @@
 [Ll]ogs/
 .codely-cli
 .codely.packages
+
+# Reproducible UI font download cache and verbose editor traces
+/UIReports/font-source/
+/UIReports/*-editor.log

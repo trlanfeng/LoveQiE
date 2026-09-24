@@ -28,6 +28,7 @@ public class CharactorManager : MonoBehaviour
         float elapsed = 0;
         while (elapsed < 0.2f)
         {
+            if (GM != null && GM.gameState == GameState.Paused) { yield return null; continue; }
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / 0.2f);
             transform.position = Vector3.Lerp(from, target, 1 - (1 - t) * (1 - t));

@@ -1,0 +1,51 @@
+{
+  "atlas_size": [
+    128,
+    128
+  ],
+  "tile_size": [
+    32,
+    32
+  ],
+  "columns": 4,
+  "rows": 4,
+  "margin": 0,
+  "spacing": 0,
+  "preset": "TileMapDual / Standard",
+  "corner_bits": {
+    "NW": 1,
+    "NE": 2,
+    "SW": 4,
+    "SE": 8
+  },
+  "row_major_masks": [
+    4,
+    10,
+    13,
+    12,
+    9,
+    14,
+    15,
+    7,
+    2,
+    3,
+    11,
+    5,
+    0,
+    8,
+    6,
+    1
+  ],
+  "foreground": [
+    2,
+    1
+  ],
+  "background": [
+    0,
+    3
+  ],
+  "hd_tile_size": [
+    128,
+    128
+  ]
+}

@@ -1,0 +1,12 @@
+Correction: 2026-09-23
+Previous atlas artwork was mispacked at (1,0), (2,0), (0,1), (1,1), (2,2), (2,3).
+Cause: manual conversion confused clockwise corner bit order with row-major corner bit order.
+Old validation checked the selected coordinate only and did not inspect artwork at that coordinate.
+Correct NW1 NE2 SW4 SE8 row-major masks:
+4,10,13,12
+9,14,15,7
+2,3,11,5
+0,8,6,1
+Now reads installed Standard preset; both final PNG sizes and original grass alpha are independently checked.
+Godot runtime verifies imported PNG corners for every actual display selection.
+Actual GPU render of test scene saved in godot-actual-render.png.

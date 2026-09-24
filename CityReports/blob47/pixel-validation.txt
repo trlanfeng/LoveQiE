@@ -1,0 +1,1 @@
+PASS: all 256 neighborhoods map to 47 Blob variants without changing their contour; 2048 compatible tile pairs compared against a continuous global contour; maximum channel difference=3/255; L/T/cross/ring/diagonal/one-cell-neck assemblies checked; 71 terrain slices.

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum GameState { Init, Ready, Play, Win, Faild, Complete }
+public enum GameState { Init, Ready, Play, Win, Faild, Complete, Home, LevelSelect, Paused }
 public class GameManager : MonoBehaviour
 {
     public static TileManager TM;
@@ -13,7 +13,13 @@ public class GameManager : MonoBehaviour
     private GameObject sceneInstance;
     private CharactorManager left;
     private CharactorManager right;
-    private float winTimer;
+    public float ElapsedSeconds { get; private set; }
+    public int MoveCount { get; private set; }
+    public int EarnedStars { get; private set; }
+    public event System.Action StateChanged;
+    private double startedAt;
+    private float elapsedBeforePause;
+    private GameUI ui;
     private void Start()
     {
         TM = GetComponent<TileManager>();
@@ -26,7 +32,9 @@ public class GameManager : MonoBehaviour
         right = charactorRight.GetComponent<CharactorManager>();
         left.GM = right.GM = this;
         left.TM = right.TM = TM;
-        LoadLevel(1);
+        ui = gameObject.AddComponent<GameUI>();
+        ui.Initialize(this);
+        ShowHome();
     }
     public bool LoadLevel(int number)
     {
@@ -44,25 +52,31 @@ public class GameManager : MonoBehaviour
         CurrentLevel = sceneInstance.GetComponent<NativeLevel>();
         CityLevelVisuals.Apply(CurrentLevel);
         CurrentScene = number;
+        charactorLeft.SetActive(true);
+        charactorRight.SetActive(true);
         left.ResetAt(CurrentLevel.CellCenter(7, 10));
         right.ResetAt(CurrentLevel.CellCenter(9, 10));
-        winTimer = 0; gameState = GameState.Play; return true;
+        ElapsedSeconds = elapsedBeforePause = 0;
+        MoveCount = EarnedStars = 0;
+        startedAt = Time.realtimeSinceStartupAsDouble;
+        SetState(GameState.Play);
+        return true;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) { LoadLevel(CurrentScene > 0 ? CurrentScene : 1); return; }
-        if (gameState == GameState.Win)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            winTimer += Time.deltaTime;
-            if (winTimer >= 1f)
-            {
-                if (CurrentScene < MaxScene) LoadLevel(CurrentScene + 1);
-                else gameState = GameState.Complete;
-            }
+            if (gameState == GameState.Play) Pause();
+            else if (gameState == GameState.Paused) Resume();
+            else if (gameState == GameState.LevelSelect) ShowHome();
             return;
         }
-        if (gameState != GameState.Play || CurrentLevel == null || left.IsMoving || right.IsMoving) return;
-        if (ArePlayersAtGoal()) { gameState = GameState.Win; winTimer = 0; return; }
+        if (Input.GetKeyDown(KeyCode.R) && (gameState == GameState.Play || gameState == GameState.Paused))
+        { LoadLevel(CurrentScene); return; }
+        if (gameState != GameState.Play || CurrentLevel == null) return;
+        ElapsedSeconds = elapsedBeforePause + (float)(Time.realtimeSinceStartupAsDouble - startedAt);
+        if (left.IsMoving || right.IsMoving) return;
+        if (ArePlayersAtGoal()) { CompleteLevel(); return; }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) TryMove(Vector2Int.up);
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) TryMove(Vector2Int.down);
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) TryMove(Vector2Int.left);
@@ -74,6 +88,7 @@ public class GameManager : MonoBehaviour
         if (Mathf.Abs(direction.x) + Mathf.Abs(direction.y) != 1) return false;
         bool movedLeft = left.TryMove(direction);
         bool movedRight = right.TryMove(direction);
+        if (movedLeft || movedRight) MoveCount++;
         return movedLeft || movedRight;
     }
     public bool ArePlayersAtGoal()
@@ -83,18 +98,69 @@ public class GameManager : MonoBehaviour
         Vector2Int b = CurrentLevel.WorldToIndex(right.transform.position);
         return a.y == 1 && b.y == 1 && ((a.x == 7 && b.x == 9) || (a.x == 9 && b.x == 7));
     }
-    private void OnGUI()
+    public static int StarsForTime(float seconds) => seconds <= 30f ? 3 : seconds <= 60f ? 2 : 1;
+
+    public int BestStars(int level) => PlayerPrefs.GetInt("LoveQiE.stars." + level, 0);
+
+    private void CompleteLevel()
     {
-        GUI.Label(new Rect(12, 8, 500, 24), "LEVEL " + CurrentScene + " / 99    WASD / Arrows: Move    R: Restart");
-        if (gameState == GameState.Complete)
-        {
-            GUI.Box(new Rect(Screen.width / 2 - 140, Screen.height / 2 - 45, 280, 90), "All 99 levels completed!");
-            if (GUI.Button(new Rect(Screen.width / 2 - 60, Screen.height / 2, 120, 30), "Play again")) LoadLevel(1);
-        }
+        EarnedStars = StarsForTime(ElapsedSeconds);
+        // Automated regression must not replace a player's real records.
+        if (!System.Array.Exists(System.Environment.GetCommandLineArgs(), a => a == "-nativeSmoke"))
+            SaveBestStars(CurrentScene, EarnedStars);
+        SetState(CurrentScene == MaxScene ? GameState.Complete : GameState.Win);
+    }
+    public static void SaveBestStars(int level, int stars)
+    {
+        string key = "LoveQiE.stars." + level;
+        PlayerPrefs.SetInt(key, Mathf.Max(PlayerPrefs.GetInt(key, 0), Mathf.Clamp(stars, 1, 3)));
+        PlayerPrefs.Save();
+    }
+    public bool NextLevel()
+    {
+        return gameState == GameState.Win && CurrentScene < MaxScene && LoadLevel(CurrentScene + 1);
+    }
+    public void ShowHome() { LeaveLevel(); SetState(GameState.Home); }
+    public void ShowLevelSelect() { LeaveLevel(); SetState(GameState.LevelSelect); }
+    private void LeaveLevel()
+    {
+        Time.timeScale = 1;
+        if (sceneInstance != null) { sceneInstance.SetActive(false); Destroy(sceneInstance); }
+        sceneInstance = null;
+        CurrentLevel = null;
+        charactorLeft.SetActive(false);
+        charactorRight.SetActive(false);
+    }
+    public void Pause()
+    {
+        if (gameState != GameState.Play) return;
+        ElapsedSeconds = elapsedBeforePause + (float)(Time.realtimeSinceStartupAsDouble - startedAt);
+        elapsedBeforePause = ElapsedSeconds;
+        Time.timeScale = 0;
+        SetState(GameState.Paused);
+    }
+    public void Resume()
+    {
+        if (gameState != GameState.Paused) return;
+        startedAt = Time.realtimeSinceStartupAsDouble;
+        Time.timeScale = 1;
+        SetState(GameState.Play);
+    }
+    private void OnApplicationFocus(bool focused)
+    {
+        if (!focused && gameState == GameState.Play && !Application.isBatchMode
+            && !System.Array.Exists(System.Environment.GetCommandLineArgs(), a => a == "-nativeSmoke")) Pause();
+    }
+    private void SetState(GameState state)
+    {
+        if (state == GameState.Play && Time.timeScale == 0) Time.timeScale = 1;
+        gameState = state;
+        StateChanged?.Invoke();
     }
     private void OnDestroy()
     {
         if (sceneInstance != null) Destroy(sceneInstance);
         CurrentLevel = null; TM = null;
+        Time.timeScale = 1;
     }
 }

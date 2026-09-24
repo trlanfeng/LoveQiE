@@ -1,0 +1,36 @@
+.stage { width: 1280px; height: 800px; position: absolute; color: rgb(246, 236, 213); font-size: 22px; }
+.stage.menu { background-color: rgb(13, 30, 49); border-top-width: 4px; border-top-color: rgb(202, 158, 77); }
+Label { margin: 0; padding: 0; -unity-text-align: middle-left; white-space: normal; }
+Button { margin: 0; padding: 0; border-width: 0; border-radius: 12px; color: rgb(246, 236, 213); font-size: 22px; -unity-font-style: bold; -unity-text-align: middle-center; }
+Button:hover { background-color: rgb(49, 81, 108); }
+Button:focus { border-width: 2px; border-color: rgb(255, 213, 125); }
+Button:active { scale: 0.97 0.97; }
+Button:disabled { opacity: 0.3; }
+.title { font-size: 70px; -unity-font-style: bold; color: rgb(255, 220, 150); }
+.heading { font-size: 42px; -unity-font-style: bold; color: rgb(255, 224, 165); }
+.subtitle { font-size: 25px; }
+.eyebrow { font-size: 20px; color: rgb(225, 185, 111); letter-spacing: 3px; }
+.body { font-size: 21px; }
+.muted { font-size: 19px; color: rgb(163, 184, 200); }
+.tiny { font-size: 16px; color: rgb(163, 184, 200); }
+.center { -unity-text-align: middle-center; }
+.art, .art-button { -unity-background-scale-mode: scale-to-fit; }
+.art-button { background-color: rgba(0, 0, 0, 0); border-radius: 20px; }
+.art-button:hover { background-color: rgba(121, 184, 222, 0.15); }
+.primary { background-color: rgb(237, 190, 104); color: rgb(37, 42, 48); border-bottom-width: 4px; border-bottom-color: rgb(157, 109, 43); }
+.primary:hover { background-color: rgb(255, 214, 135); }
+.secondary, .direction { background-color: rgb(33, 58, 81); border-width: 1px; border-color: rgb(83, 109, 128); }
+.direction { font-size: 28px; }
+.text-button { background-color: rgba(0, 0, 0, 0); font-size: 18px; color: rgb(181, 203, 216); }
+.level-card { background-color: rgb(20, 41, 62); border-width: 1px; border-color: rgb(50, 76, 95); border-radius: 16px; }
+.level-card:hover { background-color: rgb(33, 62, 84); border-color: rgb(224, 183, 103); }
+.level-number { border-radius: 40px; background-color: rgb(20, 49, 73); color: rgb(255, 239, 199); -unity-font-style: bold; font-size: 37px; -unity-text-align: middle-center; }
+.score-plaque { background-color: rgb(18, 40, 59); border-radius: 5px; }
+.card-caption { font-size: 19px; -unity-text-align: middle-center; }
+.hud-bar { background-color: rgb(13, 30, 49); }
+.timer { color: rgb(255, 232, 177); font-size: 32px; -unity-font-style: bold; -unity-text-align: middle-center; }
+.steps { color: rgb(255, 226, 150); font-size: 18px; -unity-text-align: middle-center; }
+.timer-track { background-color: rgb(46, 65, 78); border-radius: 4px; overflow: hidden; }
+.timer-fill { background-color: rgb(126, 211, 199); border-radius: 4px; }
+.overlay { background-color: rgba(4, 13, 25, 0.84); }
+.modal { background-color: rgb(18, 38, 58); border-width: 2px; border-color: rgb(215, 170, 89); border-radius: 24px; }

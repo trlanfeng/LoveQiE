@@ -9,6 +9,7 @@ import math
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps
 from prepare_car_sprites import extract as chroma_extract, make_frames
+from city_sidewalk_geometry import BLOB_MASKS, normalize_mask
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "output/imagegen"
@@ -42,7 +43,9 @@ def pack(name, entries, columns):
         for dx, dy, tx, ty in [(-PAD, -PAD, 0, 0), (SIZE, -PAD, 127, 0), (-PAD, SIZE, 0, 127), (SIZE, SIZE, 127, 127)]:
             sheet.paste(tile.getpixel((tx, ty)), (x + dx, y + dy, x + dx + PAD, y + dy + PAD))
         records.append(dict(name=label, x=x, y=sheet.height - y - SIZE, width=SIZE, height=SIZE))
-    sheet.save(OUT / f"{name}.png")
+    temporary = OUT / f"{name}.tmp.png"
+    sheet.save(temporary)
+    temporary.replace(OUT / f"{name}.png")
     return dict(file=f"{name}.png", sprites=records)
 
 
@@ -72,7 +75,7 @@ def terrain():
         tile.alpha_composite(wear)
         assert tile.getextrema()[3] == (255, 255)
         entries.append((f"asphalt_{i:02}", tile))
-    for mask in range(256):
+    for mask in BLOB_MASKS:
         entries.append((f"sidewalk_{mask:02}", raised_sidewalk(mask, asphalt)))
     for mask in range(16):
         tile = Image.new("RGBA", (128, 128))
@@ -140,7 +143,7 @@ def main():
     buildings, props = props_and_buildings()
     vehicles = cars()
     manifest = dict(tileSize=SIZE, padding=PAD, pixelsPerUnit=128, atlases=[
-        pack("city_terrain", ground, 16), pack("city_buildings", buildings, 4),
+        pack("city_terrain", ground, 8), pack("city_buildings", buildings, 4),
         pack("city_props", props, 4), pack("city_cars", vehicles, 4)])
     (OUT.parent / "city-atlas.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     # A labeled contact sheet for choosing tiles, separate from the runtime atlases.
@@ -162,7 +165,7 @@ def main():
             for col in range(5):
                 frame.paste(ground[0][1], (col * 128, row * 128))
         for col, variant in enumerate((0, 1, 2, 4, 6)):
-            frame.paste(ground[4 + 4][1], (col * 128, 0))
+            frame.paste(dict(ground)[f"sidewalk_{normalize_mask(4):02}"], (col * 128, 0))
             tile = buildings[variant][1]
             frame.paste(tile, (col * 128, 0), tile)
         for x, offset in [(160, 0), (352, 4)]:
@@ -171,8 +174,8 @@ def main():
         animated.append(frame)
     animated[0].save(REPORT / "city-style-preview.png")
     animated[0].save(REPORT / "city-cars-driving.gif", save_all=True, append_images=animated[1:], duration=50, loop=0)
-    (REPORT / "image-validation.txt").write_text("PASS: 300 sprites (280 terrain, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.\n", encoding="utf-8")
-    print("PASS: 4 atlases, 300 sprites; exact asphalt seams, transparent cutouts, car loops and manifest.")
+    (REPORT / "image-validation.txt").write_text("PASS: 91 sprites (71 terrain including 47 Blob sidewalks, 8 buildings, 4 props, 8 car frames); 128x128; 2px extruded gutters; transparent objects; 16 pairs of asphalt variants share exact edge pixels; four unique frames per car.\n", encoding="utf-8")
+    print("PASS: 4 atlases, 91 sprites; Blob47, exact asphalt seams, transparent cutouts, car loops and manifest.")
 
 
 if __name__ == "__main__":

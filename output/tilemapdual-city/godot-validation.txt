@@ -1,0 +1,1 @@
+PASS: Godot 4.7.2, installed TileMapDual Standard preset; 16/16 actual display selections checked against IMPORTED PNG alpha corners and original grass reference; foreground removal updates display and selects correct pixels; native TileSet resource and test scene saved. GUI painting not manually verified.
